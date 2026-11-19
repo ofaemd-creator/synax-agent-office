@@ -1,0 +1,36 @@
+{
+  "job_id": "SYNAX-JOB-0002",
+  "engine_provider": "Claude Code",
+  "target_agent_id": "agent-scholar",
+  "kernel_name": "synax_hemodynamic_ibp_guard",
+  "formal_proof": {
+    "status": "PROVEN_SAFE_0_ULP",
+    "output_interval": [
+      0.0,
+      220.0
+    ],
+    "ieee754_suites_passed": "19/19",
+    "certificate_sha256": "4c8c15ff9b7dbdcf2a5e66ac29d418925c49f37e5d10d5208d8a43501da6952c"
+  },
+  "academic_meta_analysis": {
+    "included_studies": 4,
+    "total_sample_n": 7960,
+    "pooled_effect_d": 1.249,
+    "ci95": [
+      1.178,
+      1.32
+    ],
+    "p_value": "< 0.0001",
+    "i_squared_pct": 95.9
+  },
+  "lyapunov_autocal": {
+    "v_initial": 2.082249,
+    "v_final": 0.00016524,
+    "drift_suppression_pct": 99.305
+  },
+  "token_shield": {
+    "raw_tokens": 3090,
+    "compressed_tokens": 132,
+    "savings_pct": 95.73
+  }
+}

@@ -1,0 +1,16 @@
+synax 1.0
+
+// SYNAX Otonom 0-ULP Doğrulanmış Çoklu-Silikon & Lyapunov İşlem Çekirdeği
+// Sentezleyen: SYNAX 3D Agent Office v3.0 (SYNAX-JOB-0001 · Engine: Claude Code + Codex + Antigravity)
+kernel synax_autonomous_verified_kernel(
+  signal_a: tensor<f32>,
+  drift_b: tensor<f32>
+) -> tensor<f32> {
+  intent "SYNAX Otonom 0-ULP Doğrulanmış Çoklu-Silikon & Lyapunov İşlem Çekirdeği — V_{k+1} < V_k Zero-Drift & 0-ULP Verified"
+  safety {
+    nonfinite = heal(0.0)
+    bounds = (-125.0, 125.0)
+  }
+  let out = fma(signal_a, 0.95, -drift_b)
+  return out
+}

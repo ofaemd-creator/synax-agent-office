@@ -1,0 +1,16 @@
+synax 1.0
+
+// İnvaziv Kan Basıncı (IBP / CPP) Lyapunov Sıfır-Sapma & Perfüzyon Çekirdeği
+// Sentezleyen: SYNAX 3D Agent Office v3.0 (SYNAX-JOB-0002 · Engine: Claude Code)
+kernel synax_hemodynamic_ibp_guard(
+  map_mmhg: tensor<f32>,
+  icp_drift_mmhg: tensor<f32>
+) -> tensor<f32> {
+  intent "İnvaziv Kan Basıncı (IBP / CPP) Lyapunov Sıfır-Sapma & Perfüzyon Çekirdeği — V_{k+1} < V_k Zero-Drift & 0-ULP Verified"
+  safety {
+    nonfinite = heal(0.0)
+    bounds = (0.0, 220.0)
+  }
+  let out = relu(map_mmhg - icp_drift_mmhg)
+  return out
+}

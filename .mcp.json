@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "synax-agent-office": {
+      "command": "python3",
+      "args": [
+        "/Users/o.farukaydin/.gemini/antigravity/scratch/synax/src/synax/office_mcp_server.py",
+        "--stdio"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

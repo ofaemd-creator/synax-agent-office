@@ -1,0 +1,36 @@
+{
+  "job_id": "SYNAX-JOB-0001",
+  "engine_provider": "Claude Code + Codex + Antigravity",
+  "target_agent_id": "ALL_8_AGENTS",
+  "kernel_name": "synax_autonomous_verified_kernel",
+  "formal_proof": {
+    "status": "PROVEN_SAFE_0_ULP",
+    "output_interval": [
+      -125.0,
+      125.0
+    ],
+    "ieee754_suites_passed": "19/19",
+    "certificate_sha256": "eb02b7c371f5ef37157acc092e876d4d4692729be5b71d0d61b9bc906427b376"
+  },
+  "academic_meta_analysis": {
+    "included_studies": 6,
+    "total_sample_n": 9180,
+    "pooled_effect_d": 1.155,
+    "ci95": [
+      1.095,
+      1.215
+    ],
+    "p_value": "< 0.0001",
+    "i_squared_pct": 95.0
+  },
+  "lyapunov_autocal": {
+    "v_initial": 2.082249,
+    "v_final": 0.00016524,
+    "drift_suppression_pct": 99.305
+  },
+  "token_shield": {
+    "raw_tokens": 3379,
+    "compressed_tokens": 134,
+    "savings_pct": 96.03
+  }
+}

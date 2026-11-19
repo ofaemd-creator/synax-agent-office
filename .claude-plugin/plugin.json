@@ -1,0 +1,7 @@
+{
+  "name": "synax-agent-office",
+  "version": "2.5.0",
+  "description": "SYNAX 3D Multitask Agent Office & Native Turkish Conversational LLM for Claude Code, OpenAI Codex, and Antigravity.",
+  "author": "Dr. Ömer Faruk Aydın (@ofaemd-creator)",
+  "mcp": "../.mcp.json"
+}
