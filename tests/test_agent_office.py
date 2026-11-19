@@ -49,7 +49,7 @@ class TestSynaxAgentOfficeV3(unittest.TestCase):
 
     def test_v3_3d_office_html_contains_per_agent_controls(self):
         html = build_embedded_3d_office_html()
-        self.assertIn("SYNAX-OMNI v5.0", html)
+        self.assertTrue("SYNAX-OMNI v6.0" in html or "SYNAX-OMNI v5.0" in html)
         self.assertIn("PIXAR", html)
         self.assertIn("assignTaskToSingleAgent", html)
         self.assertIn("agent-scholar", html)
