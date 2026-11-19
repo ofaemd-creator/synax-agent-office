@@ -13,15 +13,15 @@
     "certificate_sha256": "eb02b7c371f5ef37157acc092e876d4d4692729be5b71d0d61b9bc906427b376"
   },
   "academic_meta_analysis": {
-    "included_studies": 6,
-    "total_sample_n": 9180,
-    "pooled_effect_d": 1.155,
+    "included_studies": 4,
+    "total_sample_n": 7960,
+    "pooled_effect_d": 1.249,
     "ci95": [
-      1.095,
-      1.215
+      1.178,
+      1.32
     ],
     "p_value": "< 0.0001",
-    "i_squared_pct": 95.0
+    "i_squared_pct": 95.9
   },
   "lyapunov_autocal": {
     "v_initial": 2.082249,
@@ -29,8 +29,8 @@
     "drift_suppression_pct": 99.305
   },
   "token_shield": {
-    "raw_tokens": 3379,
+    "raw_tokens": 3075,
     "compressed_tokens": 134,
-    "savings_pct": 96.03
+    "savings_pct": 95.64
   }
 }

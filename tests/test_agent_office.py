@@ -49,7 +49,8 @@ class TestSynaxAgentOfficeV3(unittest.TestCase):
 
     def test_v3_3d_office_html_contains_per_agent_controls(self):
         html = build_embedded_3d_office_html()
-        self.assertIn("SYNAX 3D AGENT OFFICE v3.0", html)
+        self.assertIn("SYNAX 3D AGENT OFFICE", html)
+        self.assertIn("PIXAR", html)
         self.assertIn("assignTaskToSingleAgent", html)
         self.assertIn("agent-scholar", html)
         self.assertIn("agent-biostat", html)

@@ -1,9 +1,9 @@
 # 🔐 SYNAX 3D Agent Office v3.0 — Claude Code, OpenAI Codex & Antigravity Handoff Capsule
 - **Job ID:** `SYNAX-JOB-0002` · **Assigned Engine:** `Claude Code`
-- **Vault SHA-256:** `39a83e2ab8f8d41907adf40aa6f7d90d99df4f8846ae63a60ce3c4b967a4478c`
-- **Capsule Size:** `132 tokens` (**`-95.73%`** vs raw `3090 tokens`)
+- **Vault SHA-256:** `726892a6ef36ed662b5903e96aeeaa8b9079874849d5462ce3fd3561e8702c72`
+- **Capsule Size:** `132 tokens` (**`-96.03%`** vs raw `3329 tokens`)
 - **Synthesized Kernel:** `synax_hemodynamic_ibp_guard` (`[0.0, 220.0] 0-ULP SAFE`)
-- **Academic Meta-Analysis:** $N = 7,960$, Pooled $d = 1.249$ (`95% CI: [1.178, 1.32]`, `p < 0.0001`)
+- **Academic Meta-Analysis:** $N = 9,180$, Pooled $d = 1.155$ (`95% CI: [1.095, 1.215]`, `p < 0.0001`)
 - **Lyapunov Zero-Drift:** $V_1 = 2.0822 \rightarrow V_{20} = 0.000165$ (`%99.305` drift suppression)
 
 ## 🤖 Active Claude Code Subagents (`.claude/agents/`)
