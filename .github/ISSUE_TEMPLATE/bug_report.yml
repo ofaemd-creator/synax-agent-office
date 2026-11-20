@@ -1,0 +1,66 @@
+name: 🐛 Bug Report
+description: Report a bug, crash, or unexpected behavior in SYNAX Agent Office or Super-LLM.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue in **SYNAX 3D Agent Office & Super-LLM**!
+        Please fill out the details below so we can diagnose and resolve it quickly.
+  - type: input
+    id: version
+    attributes:
+      label: SYNAX Version
+      description: What version of SYNAX are you running? (e.g., v6.0.0, Docker, or Web)
+      placeholder: "v6.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Operating System / Environment
+      description: Which environment are you running SYNAX on?
+      options:
+        - macOS (Apple Silicon M1/M2/M3/M4)
+        - macOS (Intel x86_64)
+        - Windows 11 / Windows 10 (PowerShell)
+        - Linux (Ubuntu, Debian, Fedora, Arch)
+        - Web Browser (Chrome, Safari, Edge, Firefox)
+        - VS Code Extension
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "When asking the biomedical agent to query PubMed, the browser console shows..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Open 'https://synaxcode.com/office.html'
+        2. Click on 'Biomedical Agent'
+        3. Enter query '...'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "The agent should fetch live NCBI PMIDs and render a KaTeX artifact..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Screenshots
+      description: Paste any terminal output, browser console logs, or drag & drop screenshots.
+      render: shell

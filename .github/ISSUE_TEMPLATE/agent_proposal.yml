@@ -1,0 +1,32 @@
+name: 🤖 Propose a Specialist Agent
+description: Propose a new 3D autonomous specialist agent role for SYNAX Agent Office.
+title: "[Agent Proposal]: "
+labels: ["agent-proposal", "ai-specialist"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        SYNAX Agent Office features 8 core autonomous agents (Biomedical, Silicon/E-Graph, Token Shield, Context Vault, Full-Stack, Telegram, Tycoon Architect, Academic). Propose a new specialist agent here!
+  - type: input
+    id: agent_name
+    attributes:
+      label: Agent Name & Role
+      placeholder: "e.g., Quantum Algorithm Specialist, Financial Risk Auditor, GIS Spatial Analyst"
+    validations:
+      required: true
+  - type: textarea
+    id: toolsets
+    attributes:
+      label: Specialized MCP Tools & APIs
+      description: What live APIs, databases, or local compilers should this agent possess?
+      placeholder: "e.g., Qiskit SDK, SEC EDGAR filings API, OpenStreetMap Overpass API"
+    validations:
+      required: true
+  - type: textarea
+    id: 3d_avatar
+    attributes:
+      label: 3D Pixar Desk & Visual Concept
+      description: How should this agent's desk, Pixar character avatar, and animations look in the 3D diorama?
+      placeholder: "Neon quantum computer desk with pulsing qubit animations..."
+    validations:
+      required: false

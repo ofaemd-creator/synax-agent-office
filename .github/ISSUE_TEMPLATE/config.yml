@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Community Discussions & Q&A
+    url: https://github.com/ofaemd-creator/synax-agent-office/discussions
+    about: Ask questions, share your 3D office configurations, or discuss agent architecture.
+  - name: 🔒 Security Vulnerability Report
+    url: https://github.com/ofaemd-creator/synax-agent-office/security/policy
+    about: Privately disclose security vulnerabilities to the maintainers.
+  - name: 🌐 Live Web Edition
+    url: https://synaxcode.com/office.html
+    about: Launch and experience the interactive 3D Pixar-Tycoon Office directly in your browser.
