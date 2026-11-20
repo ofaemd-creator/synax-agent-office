@@ -1998,8 +1998,13 @@ class AgentOfficeHTTPHandler(BaseHTTPRequestHandler):
         if self.path == "/api/run-python":
             length = int(self.headers.get("Content-Length", "0"))
             raw = self.rfile.read(length).decode("utf-8") if length > 0 else "{}"
-            data = json.loads(raw)
-            res = self.orchestrator.producer.react.execute_python_sandbox(data.get("code", ""))
+            try:
+                data = json.loads(raw)
+            except Exception:
+                data = {}
+            code = data.get("code", "")
+            user_approved = bool(data.get("user_approved", False))
+            res = self.orchestrator.producer.react.execute_python_sandbox(code, user_approved=user_approved)
             body = json.dumps(res, ensure_ascii=False).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json; charset=utf-8")

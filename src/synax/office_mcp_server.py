@@ -43,6 +43,7 @@ from synax.academic_skills import (
     BiostatAndCritiqueAgent,
     ClaudeCodexSkillPack,
 )
+from synax.verification import NumericalVerifier, VerificationStatus, VerificationCertificate
 from synax.computer_agent import SynaxComputerAgent
 from synax.super_llm import SynaxOmniSuperLLM
 from synax.react_agent_engine import SynaxReActEngine
@@ -203,7 +204,7 @@ class RealTimeWorkProducer:
         scholar_out = self.scholar.conduct_systematic_review(prompt, try_live=True)
         biostat_out = self.biostat.analyze_and_interpret(scholar_out["included_studies"], prompt)
 
-        # 3. Masa 4: Agent-Lyapunov Contractive Zero-Drift Simulation
+        # 3. Masa 4: Agent-Lyapunov Contractive Zero-Drift Verification & Simulation
         gamma = bp["gamma"]
         ref_val = bp["ref_val"]
         initial_drift = 1.85
@@ -228,12 +229,23 @@ class RealTimeWorkProducer:
         v_end = lyapunov_series[-1]["lyapunov_V"]
         suppression_pct = round((1.0 - (math.sqrt(v_end) / max(initial_drift, 1e-9))) * 100.0, 3)
 
-        # 4. Masa 5: Agent-EGraph 0-ULP Interval Proof
+        # Execute formal contractivity check using NumericalVerifier
+        lyap_cert = NumericalVerifier.verify_lyapunov_contractivity(
+            gamma=gamma, initial_error=initial_drift, iterations=20
+        )
+
+        # 4. Masa 5: Agent-EGraph Interval Verification
         lo_out = round(p0_bounds[0] - p1_bounds[1], 4)
         hi_out = round(p0_bounds[1] - p1_bounds[0], 4)
         if "relu" in bp["expr_sx"] or "clamp" in bp["expr_sx"]:
             lo_out = max(0.0, lo_out)
-        proof_payload = f"{kname}:{bp['expr_sx']}:[{lo_out},{hi_out}]:0-ULP"
+
+        # Formally verify interval bounds
+        interval_cert = NumericalVerifier.verify_ieee754_interval_bounds(
+            expr_str=bp["expr_sx"],
+            input_bounds={p0_name: p0_bounds, p1_name: p1_bounds},
+        )
+        proof_payload = f"{kname}:{bp['expr_sx']}:[{lo_out},{hi_out}]:status={interval_cert.status.value}"
         proof_sha256 = hashlib.sha256(proof_payload.encode("utf-8")).hexdigest()
 
         # 5. Masa 8: Agent-FullStack & 5-Target Silicon Codegen + TDD Suite
@@ -342,9 +354,30 @@ class RealTimeWorkProducer:
         # 6. Masa 6 & Masa 7: Token Shield & SHA-256 Context Vault Capsule
         full_bundle_text = sx_source + "\n" + py_source + "\n" + c_source + "\n" + scholar_out["report_markdown"]
         raw_tokens_est = max(1, (len(full_bundle_text) + 4500) // 4)
+
+        if biostat_out.get("status") == "SUCCESS":
+            b_res = biostat_out["results"]
+            study_count = b_res["study_count"]
+            total_sample_n = biostat_out["total_sample_n"]
+            pooled_effect_d = b_res["pooled_random"]
+            ci95 = b_res["ci95"]
+            p_value = b_res["p_value"]
+            i_squared_pct = b_res["i_squared_pct"]
+            meta_summary = f"PRISMA_N={total_sample_n}; d={pooled_effect_d}"
+            meta_line = f"- **Academic Meta-Analysis:** $N = {total_sample_n:,}$, Pooled $d = {pooled_effect_d}$ (`95% CI: {ci95}`, `p {p_value}`)\n"
+        else:
+            study_count = 0
+            total_sample_n = 0
+            pooled_effect_d = None
+            ci95 = None
+            p_value = "INSUFFICIENT_VERIFIED_DATA"
+            i_squared_pct = None
+            meta_summary = "PRISMA=QUALITATIVE_ONLY"
+            meta_line = f"- **Academic Review:** Qualitative synthesis ({len(scholar_out.get('included_studies', []))} verified records). Quantitative meta-analysis pending empirical data.\n"
+
         skeleton_text = (
-            f"job={job_id}; kernel={kname}[{lo_out},{hi_out}]0-ULP; "
-            f"Lyapunov={suppression_pct}%; PRISMA_N={biostat_out['total_sample_n']}; d={biostat_out['pooled_effect_d']}"
+            f"job={job_id}; kernel={kname}[{lo_out},{hi_out}]status={interval_cert.status.value}; "
+            f"Lyapunov={suppression_pct}%; {meta_summary}"
         )
         compressed_tokens_est = max(1, len(skeleton_text) // 4 + 104)
         token_savings_pct = round((1.0 - (compressed_tokens_est / raw_tokens_est)) * 100.0, 2)
@@ -355,15 +388,15 @@ class RealTimeWorkProducer:
             f"- **Job ID:** `{job_id}` · **Assigned Engine:** `{engine_provider}`\n"
             f"- **Vault SHA-256:** `{vault_sha256}`\n"
             f"- **Capsule Size:** `{compressed_tokens_est} tokens` (**`-{token_savings_pct}%`** vs raw `{raw_tokens_est} tokens`)\n"
-            f"- **Synthesized Kernel:** `{kname}` (`[{lo_out}, {hi_out}] 0-ULP SAFE`)\n"
-            f"- **Academic Meta-Analysis:** $N = {biostat_out['total_sample_n']:,}$, Pooled $d = {biostat_out['pooled_effect_d']}$ (`95% CI: {biostat_out['ci95']}`, `p {biostat_out['p_value']}`)\n"
-            f"- **Lyapunov Zero-Drift:** $V_1 = {v_start:.4f} \\rightarrow V_{{20}} = {v_end:.6f}$ (`%{suppression_pct}` drift suppression)\n\n"
+            f"- **Synthesized Kernel:** `{kname}` (`[{lo_out}, {hi_out}] status: {interval_cert.status.value}`)\n"
+            f"{meta_line}"
+            f"- **Lyapunov Zero-Drift:** $V_1 = {v_start:.4f} \\rightarrow V_{{20}} = {v_end:.6f}$ (`%{suppression_pct}` drift suppression | status: `{lyap_cert.status.value}`)\n\n"
             f"## 🤖 Active Claude Code Subagents (`.claude/agents/`)\n"
             f"- `@academic-scholar` — PRISMA 2020 Systematic Review, PubMed/CrossRef & Vancouver/BibTeX Citations\n"
             f"- `@biostat-analyst` — Meta-Analysis, Forest Plot, ROC/AUC, Bland-Altman & IMRaD Manuscript\n"
             f"- `@biomed-lyapunov` — Zero-Drift ($V_{{k+1}} < V_k$) Medical Device Calibration & C99/MCU Firmware\n"
             f"- `@token-shield-guardian` — AST Skeletonization & -88% Token Cost Compressor\n"
-            f"- `@formal-silicon-architect` — E-Graph 0-ULP Prover & ARM64 NEON / AVX2 / Q16.16 Codegen\n\n"
+            f"- `@formal-silicon-architect` — E-Graph Prover & ARM64 NEON / AVX2 / Q16.16 Codegen\n\n"
             + power_out["security_audit_markdown"]
         )
 
@@ -380,24 +413,22 @@ class RealTimeWorkProducer:
             "engine_provider": engine_provider,
             "target_agent_id": target_agent_id or "ALL_8_AGENTS",
             "kernel_name": kname,
-            "formal_proof": {
-                "status": "PROVEN_SAFE_0_ULP",
-                "output_interval": [lo_out, hi_out],
-                "ieee754_suites_passed": "19/19",
-                "certificate_sha256": proof_sha256,
-            },
+            "formal_verification": interval_cert.to_dict(),
+            "lyapunov_verification": lyap_cert.to_dict(),
             "academic_meta_analysis": {
-                "included_studies": biostat_out["study_count"],
-                "total_sample_n": biostat_out["total_sample_n"],
-                "pooled_effect_d": biostat_out["pooled_effect_d"],
-                "ci95": biostat_out["ci95"],
-                "p_value": biostat_out["p_value"],
-                "i_squared_pct": biostat_out["i_squared_pct"],
+                "status": biostat_out.get("status", "SUCCESS"),
+                "included_studies": study_count,
+                "total_sample_n": total_sample_n,
+                "pooled_effect_d": pooled_effect_d,
+                "ci95": ci95,
+                "p_value": p_value,
+                "i_squared_pct": i_squared_pct,
             },
             "lyapunov_autocal": {
                 "v_initial": v_start,
                 "v_final": v_end,
                 "drift_suppression_pct": suppression_pct,
+                "verification_status": lyap_cert.status.value,
             },
             "token_shield": {
                 "raw_tokens": raw_tokens_est,
@@ -613,7 +644,7 @@ class RealTimeWorkProducer:
                 "c_hardware_code": c_source,
                 "academic_report_md": academic_full_report_md,
                 "bibtex_citations": scholar_out["bibtex"],
-                "forest_plot_ascii": biostat_out["forest_plot_ascii"],
+                "forest_plot_ascii": biostat_out.get("forest_plot_ascii", ""),
                 "proof_certificate": proof_cert_json,
                 "claude_codex_handoff_md": claude_codex_handoff_md,
                 "lyapunov_series": lyapunov_series,

@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 
 Write-Host "==================================================================" -ForegroundColor Cyan
 Write-Host "  SYNAX-OMNI v6.0 & 3D Pixar-Tycoon Agent Office — Windows Setup  " -ForegroundColor Cyan
@@ -20,7 +20,8 @@ Write-Host "--> SYNAX-OMNI v6.0 kuruluyor: $InstallDir" -ForegroundColor Yellow
 
 if (Test-Path $InstallDir) {
     try {
-        Stop-Process -Name "python" -ErrorAction SilentlyContinue
+        # Gracefully stop only any previous synax instance running from $InstallDir
+        Get-CimInstance Win32_Process -ErrorAction SilentlyContinue | Where-Object { $_.CommandLine -like "*agent_office.py*" } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
         Remove-Item -Recurse -Force $InstallDir -ErrorAction SilentlyContinue
     } catch {}
 }

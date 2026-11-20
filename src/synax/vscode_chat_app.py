@@ -19,15 +19,59 @@ import json
 import sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from typing import Optional
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-if str(REPO_ROOT / "src") not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT / "src"))
+try:
+    from synax_chat import SynaxChatAgent, ChatResponse
+except ImportError:
+    @dataclass
+    class ChatResponse:
+        text: str
+        code: Optional[str] = None
+        language: str = "synax"
+        action: Optional[str] = None
+        metadata: Optional[Dict[str, Any]] = None
 
-from synax_chat import SynaxChatAgent
+        def to_dict(self) -> Dict[str, Any]:
+            return {
+                "text": self.text,
+                "code": self.code,
+                "language": self.language,
+                "action": self.action,
+                "metadata": self.metadata or {},
+            }
+
+    class SynaxChatAgent:  # type: ignore[no-redef]
+        """Self-contained chat agent adapter when external synax_chat package is not installed."""
+        def __init__(self) -> None:
+            from synax.synax_llm import SynaxTurkishLLM
+            from synax.react_agent_engine import SynaxReActEngine
+            self.llm = SynaxTurkishLLM()
+            self.react = SynaxReActEngine()
+
+        def process_message(self, message: str, context: Optional[str] = None) -> ChatResponse:
+            chat_out = self.llm.chat(message)
+            reply_text = chat_out.get("reply", "")
+            code = None
+            lang = "synax"
+            if "```synax" in reply_text:
+                code = reply_text.split("```synax")[1].split("```")[0].strip()
+                lang = "synax"
+            elif "```python" in reply_text:
+                code = reply_text.split("```python")[1].split("```")[0].strip()
+                lang = "python"
+            elif "```c" in reply_text:
+                code = reply_text.split("```c")[1].split("```")[0].strip()
+                lang = "c"
+            return ChatResponse(
+                text=reply_text,
+                code=code,
+                language=lang,
+                action="chat_reply",
+                metadata={"intent": chat_out.get("intent", "chat"), "confidence": chat_out.get("confidence", 0.95)},
+            )
+
 from synax.agent_office import MultitaskOfficeOrchestrator, build_embedded_3d_office_html
 
 _CHAT_AGENT: Optional[SynaxChatAgent] = None
