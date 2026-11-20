@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 
 Write-Host "==================================================================" -ForegroundColor Cyan
 Write-Host "  SYNAX-OMNI v6.0 & 3D Pixar-Tycoon Agent Office — Windows Setup  " -ForegroundColor Cyan
