@@ -1,0 +1,11 @@
+# Core HTTP and networking for PubMed/NCBI efetch & Perplexity RAG
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Type hinting & data serialization
+typing-extensions>=4.8.0
+dataclasses-json>=0.6.0
+
+# Testing & verification framework
+pytest>=8.0.0
+pytest-cov>=4.1.0

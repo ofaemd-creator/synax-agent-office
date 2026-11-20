@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synax-agent-office"
+version = "6.1.0"
+description = "SYNAX-OMNI v6.1 — 3D Pixar-Tycoon Agent Office, Super-LLM (ReAct + PubMed efetch + Groq LPU + Claude Artifacts) & Multi-Agent IDE Studio"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Dr. Ömer Faruk Aydın", email = "dev@synaxcode.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "urllib3>=2.0.0",
+    "typing-extensions>=4.8.0",
+    "dataclasses-json>=0.6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0"
+]
+
+[project.urls]
+Homepage = "https://synaxcode.com/office.html"
+Documentation = "https://github.com/ofaemd-creator/synax-agent-office/wiki"
+Repository = "https://github.com/ofaemd-creator/synax-agent-office"
+Issues = "https://github.com/ofaemd-creator/synax-agent-office/issues"
+Discussions = "https://github.com/ofaemd-creator/synax-agent-office/discussions"

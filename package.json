@@ -1,0 +1,16 @@
+{
+  "name": "synax-3d-agent-office",
+  "version": "6.1.0",
+  "description": "Interactive Three.js 3D Voxel Pixar-Tycoon Agent Office & Canvas Artifact Workbench",
+  "homepage": "https://synaxcode.com/office.html",
+  "author": "Dr. Ömer Faruk Aydın <dev@synaxcode.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "three": "^0.160.0",
+    "katex": "^0.16.9",
+    "mermaid": "^10.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
