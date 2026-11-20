@@ -20,18 +20,36 @@ Thank you for your interest in contributing to **SYNAX Agent Office**! We welcom
 - Modern web browser with WebGL 2.0 support (Chrome, Safari, Firefox, Edge)
 - Git & GitHub CLI (`gh`)
 
-### Local Installation
-```bash
-# Clone the repository
-git clone https://github.com/ofaemd-creator/synax-agent-office.git
-cd synax-agent-office
+### Forking & Local Setup
 
-# Install dependencies
-pip install -r requirements.txt
+1. **Fork the Repository:**
+   Click the **Fork** button at the top right of [https://github.com/ofaemd-creator/synax-agent-office](https://github.com/ofaemd-creator/synax-agent-office) or navigate to [https://github.com/ofaemd-creator/synax-agent-office/fork](https://github.com/ofaemd-creator/synax-agent-office/fork) to create your personal copy.
 
-# Run the full test suite
-python3 -m unittest discover -s tests -v
-```
+2. **Clone Your Fork:**
+   ```bash
+   git clone https://github.com/<your-username>/synax-agent-office.git
+   cd synax-agent-office
+   ```
+
+3. **Configure Upstream Remote:**
+   Connect your local repository to the upstream main repository to stay up to date:
+   ```bash
+   git remote add upstream https://github.com/ofaemd-creator/synax-agent-office.git
+   git remote -v
+   ```
+
+4. **Syncing with Upstream:**
+   ```bash
+   git fetch upstream
+   git checkout main
+   git merge upstream/main
+   ```
+
+5. **Install Dependencies & Verify Tests:**
+   ```bash
+   pip install -r requirements.txt
+   python3 -m unittest discover -s tests -v
+   ```
 
 ---
 

@@ -11,6 +11,11 @@
 [![macOS Masaüstü Uygulaması](https://img.shields.io/badge/💻_Masaüstü_Uygulaması-SYNAX_Studio_v6.0-a855f7?style=for-the-badge)](https://github.com/ofaemd-creator/synax-agent-office/releases/latest)
 [![VS Code Marketplace](https://img.shields.io/badge/🧩_VS_Code_&_Cursor_Eklentisi-v6.0.0-38bdf8?style=for-the-badge)](https://github.com/ofaemd-creator/synax-vscode-chat)
 
+[![CI Build](https://img.shields.io/github/actions/workflow/status/ofaemd-creator/synax-agent-office/ci.yml?branch=main&label=CI%20BUILD&style=for-the-badge&logo=githubactions)](https://github.com/ofaemd-creator/synax-agent-office/actions)
+[![GitHub Forks](https://img.shields.io/github/forks/ofaemd-creator/synax-agent-office?style=for-the-badge&logo=github&color=blue)](https://github.com/ofaemd-creator/synax-agent-office/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/ofaemd-creator/synax-agent-office?style=for-the-badge&logo=github&color=gold)](https://github.com/ofaemd-creator/synax-agent-office/stargazers)
+[![License](https://img.shields.io/badge/License-Apache_2.0-green.svg?style=for-the-badge)](LICENSE)
+
 </div>
 
 ---

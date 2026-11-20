@@ -47,6 +47,7 @@ if str(REPO_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from synax.computer_agent import SynaxComputerAgent
+from synax.sandbox import SynaxRestrictedSandbox
 
 
 class SynaxReActEngine:
@@ -233,37 +234,17 @@ class SynaxReActEngine:
         return sources[:6]
 
     # ------------------------------------------------------------------
-    # Tool 3: Real Python Code Interpreter Sandbox
+    # Tool 3: Secure Python Code Interpreter Sandbox
     # ------------------------------------------------------------------
-    def tool_run_python(self, code: str) -> Dict[str, Any]:
-        """Executes real Python code in a local 5-second timeout subprocess."""
-        with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False, encoding="utf-8") as tf:
-            tf.write(code)
-            tmp_path = tf.name
-        try:
-            t0 = time.time()
-            res = subprocess.run(
-                [sys.executable, tmp_path],
-                capture_output=True,
-                text=True,
-                timeout=5,
-                cwd=str(self.computer.user_workspace),
-            )
-            elapsed_ms = round((time.time() - t0) * 1000.0, 2)
-            return {
-                "success": res.returncode == 0,
-                "returncode": res.returncode,
-                "stdout": res.stdout.strip()[:4000],
-                "stderr": res.stderr.strip()[:2000],
-                "elapsed_ms": elapsed_ms,
-            }
-        except Exception as e:
-            return {"success": False, "returncode": -1, "stdout": "", "stderr": str(e), "elapsed_ms": 0.0}
-        finally:
-            try:
-                os.remove(tmp_path)
-            except Exception:
-                pass
+    def tool_run_python(self, code: str, user_approved: bool = False) -> Dict[str, Any]:
+        """Executes Python code in a restricted AST-verified and isolated sandbox."""
+        sandbox = SynaxRestrictedSandbox(timeout_seconds=4.0, max_output_bytes=8192)
+        result = sandbox.execute(code, user_approved=user_approved)
+        return result.to_dict()
+
+    def execute_python_sandbox(self, code: str, user_approved: bool = False) -> Dict[str, Any]:
+        """Standardized Python sandbox execution method."""
+        return self.tool_run_python(code=code, user_approved=user_approved)
 
     # ------------------------------------------------------------------
     # 4. Core ReAct Reasoning & Bespoke Artifact Generation

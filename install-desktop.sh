@@ -17,7 +17,15 @@ if [ "$(uname -s)" = "Darwin" ]; then
 fi
 
 python3 "$INSTALL_DIR/src/synax/office_mcp_server.py" --install-integrations 2>/dev/null || true
-lsof -ti :8795 | xargs kill -9 2>/dev/null || true
+# Gracefully stop any previous SYNAX desktop instance on port 8795
+EXISTING_PID=$(lsof -ti :8795 2>/dev/null || true)
+if [ -n "$EXISTING_PID" ]; then
+  kill -15 "$EXISTING_PID" 2>/dev/null || true
+  sleep 1
+  if lsof -ti :8795 >/dev/null 2>&1; then
+    lsof -ti :8795 | xargs kill -9 2>/dev/null || true
+  fi
+fi
 nohup python3 "$INSTALL_DIR/src/synax/agent_office.py" --serve --port 8795 >/tmp/synax_desktop.log 2>&1 &
 sleep 2
 open "http://127.0.0.1:8795" 2>/dev/null || xdg-open "http://127.0.0.1:8795" 2>/dev/null || true
