@@ -18,4 +18,6 @@ jobs:
         with:
           python-version: "3.11"
       - name: Run SYNAX-LLM & 3D Agent Office Unit Tests
+        env:
+          PYTHONPATH: src
         run: python3 -m unittest discover -s tests -v

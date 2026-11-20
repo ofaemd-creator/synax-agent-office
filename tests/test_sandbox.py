@@ -4,7 +4,11 @@ Unit tests for SYNAX Restricted Sandbox & AST Safety Auditor
 (`src/synax/sandbox.py`).
 """
 
+import sys
 import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from synax.sandbox import ASTSafetyAuditor, SynaxRestrictedSandbox
 

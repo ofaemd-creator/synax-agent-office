@@ -5,7 +5,11 @@ Unit tests for SYNAX Academic Research & Biostatistical Skills
 """
 
 import math
+import sys
 import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from synax.academic_skills import (
     AcademicLiteratureAgent,

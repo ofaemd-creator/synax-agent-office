@@ -4,7 +4,11 @@ Unit tests for SYNAX Verification State Model & Scientific Assurance
 (`src/synax/verification.py`).
 """
 
+import sys
 import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from synax.verification import (
     NumericalVerifier,

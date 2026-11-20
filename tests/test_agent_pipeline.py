@@ -4,7 +4,11 @@ Unit tests for SYNAX Multi-Agent Orchestration Pipeline
 (`src/synax/agent_pipeline.py`).
 """
 
+import sys
 import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from synax.agent_pipeline import (
     PipelineTask,
