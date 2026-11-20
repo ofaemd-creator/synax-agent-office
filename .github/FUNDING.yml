@@ -1,4 +1,11 @@
-# These are supported funding model platforms
+# Supported funding model platforms for SYNAX Ecosystem
+# Displays the "Sponsor this project" button on GitHub
 
+# GitHub Sponsors username
 github: [ofaemd-creator]
-custom: ["https://synaxcode.com", "https://synaxcode.com/sponsor"]
+
+# Custom sponsorship and scientific support URLs (up to 4)
+custom:
+  - "https://synaxcode.com/sponsor"
+  - "https://synaxcode.com"
+  - "https://synaxcode.org"

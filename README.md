@@ -15,6 +15,7 @@
 [![GitHub Forks](https://img.shields.io/github/forks/ofaemd-creator/synax-agent-office?style=for-the-badge&logo=github&color=blue)](https://github.com/ofaemd-creator/synax-agent-office/network/members)
 [![GitHub Stars](https://img.shields.io/github/stars/ofaemd-creator/synax-agent-office?style=for-the-badge&logo=github&color=gold)](https://github.com/ofaemd-creator/synax-agent-office/stargazers)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg?style=for-the-badge)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor_SYNAX-%E2%9D%A4-pink?style=for-the-badge&logo=githubsponsors)](https://synaxcode.com/sponsor)
 
 </div>
 
