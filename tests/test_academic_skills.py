@@ -20,6 +20,7 @@ from synax.academic_skills import (
     BiostatAndCritiqueAgent,
     Q1ManuscriptAuthorAgent,
     Q1PublicationPipeline,
+    SynaxAcademic21SkillsEngine,
     VERIFIED_BENCHMARK_CORPUS,
 )
 
@@ -194,6 +195,30 @@ class TestAcademicLiteratureAndQ1Suite(unittest.TestCase):
             for fpath in res["saved_files"]:
                 self.assertTrue(Path(fpath).exists())
                 self.assertGreater(Path(fpath).stat().st_size, 100)
+
+    def test_all_21_academic_skills_execute_standalone_and_master_pipeline(self) -> None:
+        """Verifies that all 21 specialized academic skills execute standalone without errors or injections."""
+        engine = SynaxAcademic21SkillsEngine()
+        catalog = engine.list_skills()
+        self.assertEqual(len(catalog), 21)
+
+        sample_input = (
+            "Yoğun bakım EKG ve invaziv kan basıncı monitörizasyonunda sıfır-sapmalı kalibrasyon "
+            "(N = 2480, d = 0.74, 95% CI: [0.58, 0.90], p = 0.0001, doi:10.1186/s13054-018-2009-1). "
+            "This study delves into ICU telemetry and is a game-changer."
+        )
+        for item in catalog:
+            sid = item["id"]
+            out = engine.execute_skill(
+                skill_id=sid,
+                topic_or_text=sample_input,
+                target_journal="Intensive Care Medicine (Q1 SCIE)",
+                equator_guideline="PRISMA_2020",
+            )
+            self.assertEqual(out["skill_id"], sid)
+            self.assertIn(out["status"], ("COMPLETED", "Q1_21_SKILLS_MASTER_VERIFIED"))
+            self.assertIn("deliverable_markdown", out)
+            self.assertGreater(len(out["deliverable_markdown"]), 100)
 
 
 if __name__ == "__main__":

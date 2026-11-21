@@ -3,13 +3,10 @@
     "synax-agent-office": {
       "command": "python3",
       "args": [
-        "-u",
-        "-m",
-        "synax.office_mcp_server",
+        "/Users/o.farukaydin/.gemini/antigravity/scratch/synax/src/synax/office_mcp_server.py",
         "--stdio"
       ],
       "env": {
-        "PYTHONPATH": "src",
         "PYTHONUNBUFFERED": "1"
       }
     }
