@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -e
+REPO="/Users/o.farukaydin/.gemini/antigravity/scratch/synax-agent-office"
+export PYTHONPATH="$REPO/src"
+
+CMD="${1:-status}"
+shift || true
+
+case "$CMD" in
+  status)
+    curl -s http://127.0.0.1:8795/api/automation/status | "/Users/o.farukaydin/.local/bin/python3" -m json.tool
+    ;;
+  step|shift)
+    curl -s -X POST http://127.0.0.1:8795/api/automation/step | "/Users/o.farukaydin/.local/bin/python3" -m json.tool
+    ;;
+  evolve)
+    curl -s -X POST http://127.0.0.1:8795/api/self-evolve -H "Content-Type: application/json" -d '{"topic":"'"$*"'"}' | "/Users/o.farukaydin/.local/bin/python3" -m json.tool
+    ;;
+  run|enqueue)
+    PROMPT="$*"
+    if [ -z "$PROMPT" ]; then
+      PROMPT="Yoğun bakım EKG ve IBP monitörizasyonunda sıfır-sapmalı Lyapunov kalibrasyonu"
+    fi
+    "/Users/o.farukaydin/.local/bin/python3" "$REPO/src/synax/office_automation_daemon.py" --enqueue "$PROMPT" --run-next
+    ;;
+  open|app)
+    if [ -d "/Applications/Google Chrome.app" ]; then
+      open -n -a "Google Chrome" --args --app="http://127.0.0.1:8795"
+    else
+      open "http://127.0.0.1:8795"
+    fi
+    ;;
+  *)
+    "/Users/o.farukaydin/.local/bin/python3" "$REPO/src/synax/office_automation_daemon.py" --enqueue "$CMD $*" --run-next
+    ;;
+esac
