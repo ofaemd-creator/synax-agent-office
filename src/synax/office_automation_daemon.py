@@ -85,7 +85,7 @@ class AutonomousOfficeAutomationDaemon:
         self.skills_21 = SynaxAcademic21SkillsEngine()
         self.evolution = SynaxAutonomousEvolutionEngine()
 
-        self._lock = threading.Lock()
+        self._lock = threading.RLock()
         self._daemon_thread: Optional[threading.Thread] = None
         self._stop_event = threading.Event()
         self.autonomous_mode: bool = True
@@ -217,7 +217,7 @@ class AutonomousOfficeAutomationDaemon:
             office_work = self.producer.produce_work(
                 prompt=mission["prompt"],
                 target_agent_id=mission.get("target_agent_id"),
-                write_files=True,
+                write_files=False,
             )
 
             # 2. Execute 3-Agent Sandboxed Research -> Biostat -> Sandbox Verifier Pipeline
@@ -239,9 +239,21 @@ class AutonomousOfficeAutomationDaemon:
             # 4. Trigger 1 Self-Evolution step so the office continuously grows its skill registry
             evo_res = self.evolution.run_evolution_cycle()
 
-            # Write summary manifest inside the mission folder
+            # Write summary manifest and synthesized code files inside the mission folder
             manifest_path = out_dir / "00_AUTOMATION_MISSION_MANIFEST.json"
-            saved_files = list(skill_res.get("saved_files", [])) + list(office_work["deliverables"].get("saved_files", []))
+            kname = office_work["deliverables"]["kernel_name"]
+            for fn, cnt in [
+                (f"{kname}.sx", office_work["deliverables"]["sx_code"]),
+                (f"{kname}.py", office_work["deliverables"]["python_code"]),
+                (f"{kname}_hardware.c", office_work["deliverables"]["c_hardware_code"]),
+            ]:
+                fp = out_dir / fn
+                fp.write_text(cnt, encoding="utf-8")
+            saved_files = list(skill_res.get("saved_files", [])) + [
+                str(out_dir / f"{kname}.sx"),
+                str(out_dir / f"{kname}.py"),
+                str(out_dir / f"{kname}_hardware.c"),
+            ]
 
             skill_md_path = out_dir / f"SKILL_OUTPUT_{mission.get('skill_id', 'q1')}.md"
             skill_md_path.write_text(skill_res.get("deliverable_markdown", ""), encoding="utf-8")
@@ -261,6 +273,7 @@ class AutonomousOfficeAutomationDaemon:
             mission["evolution_epoch"] = evo_res.get("evolution_epoch")
             mission["total_installed_skills"] = evo_res.get("total_installed_skills")
             mission["active_desks"] = office_work.get("desks", [])
+            mission["office_work"] = office_work
 
             manifest_path.write_text(json.dumps(mission, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             saved_files.insert(0, str(manifest_path))
@@ -309,14 +322,7 @@ class AutonomousOfficeAutomationDaemon:
             return
 
         def _worker_loop() -> None:
-            # Execute one initial autonomous mission at startup so the office is immediately active
-            try:
-                state = self._ensure_queue_file()
-                if not state.get("completed_missions"):
-                    self.execute_next_mission(force_autonomous_if_empty=True)
-            except Exception:
-                pass
-
+            self._stop_event.wait(3.0)
             while not self._stop_event.is_set():
                 try:
                     self.scan_inbox_directory()
