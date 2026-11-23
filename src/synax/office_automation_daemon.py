@@ -316,6 +316,22 @@ class AutonomousOfficeAutomationDaemon:
             "latest_evolved_skill": evo.get("latest_evolved_skill"),
         }
 
+    def _ping_online_cloud_domains(self) -> None:
+        """Triggers autonomous self-evolution & mission ticks on live cloud domains (synaxcode.online, .com, .org)."""
+        import urllib.request
+        for domain in ("https://synaxcode.online", "https://synaxcode.com", "https://synaxcode.org"):
+            try:
+                req = urllib.request.Request(
+                    f"{domain}/api.php?action=automation_step",
+                    data=b"{}",
+                    headers={"Content-Type": "application/json", "User-Agent": "SYNAX-Autonomous-Daemon/6.5"},
+                    method="POST",
+                )
+                with urllib.request.urlopen(req, timeout=4) as _:
+                    pass
+            except Exception:
+                pass
+
     def start_background_worker(self, interval_seconds: float = 90.0) -> None:
         """Starts the continuous 24/7 background agent office worker thread."""
         if self._daemon_thread and self._daemon_thread.is_alive():
@@ -329,6 +345,7 @@ class AutonomousOfficeAutomationDaemon:
                     state = self._ensure_queue_file()
                     if state.get("queued_missions") or self.autonomous_mode:
                         self.execute_next_mission(force_autonomous_if_empty=self.autonomous_mode)
+                    self._ping_online_cloud_domains()
                 except Exception:
                     pass
                 self._stop_event.wait(interval_seconds)

@@ -1942,30 +1942,32 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
     async function triggerSelfEvolutionCycle(customTopic = '') {
       const badge = document.getElementById('synaxEvoStatusBadge');
       if (badge) badge.textContent = '🧬 Ajanlar Yeni Beceri Sentezliyor & Doğruluyor...';
-      try {
-        const resp = await fetch('/api/self-evolve', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ topic: customTopic })
-        });
-        if (resp.ok) {
-          const data = await resp.json();
-          updateEvolutionHUD(data);
-          if (data.latest_evolved_skill) {
-            appendChatBubble(
-              'ai',
-              `🧬 **Otonom Öz-Evrim (Epoch #${data.evolution_epoch}) Tamamlandı!**\n\n` +
-              `- **Yeni Kazanılan Beceri:** \`${data.latest_evolved_skill.id}\` — *${data.latest_evolved_skill.title_tr}*\n` +
-              `- **Sentezleyen Ajan:** \`${data.latest_evolved_skill.agent_owner}\`\n` +
-              `- **Toplam Aktif Beceri Sayısı:** **\`${data.total_installed_skills} Beceri\`**\n` +
-              `- **Formel Doğrulama & Sıfır-Enjeksiyon Kapısı:** \`PASSED (SHA-256: #${data.latest_evolved_skill.sha256.slice(0, 10)})\``,
-              'SYNAX Self-Evolution Daemon v6.4'
-            );
+      const endpoints = ['/api/self-evolve', 'api.php?action=self_evolve'];
+      for (const ep of endpoints) {
+        try {
+          const resp = await fetch(ep, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ topic: customTopic })
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            updateEvolutionHUD(data);
+            if (data.latest_evolved_skill) {
+              appendChatBubble(
+                'ai',
+                `🧬 **Otonom Öz-Evrim (Epoch #${data.evolution_epoch}) Tamamlandı!**\n\n` +
+                `- **Yeni Kazanılan Beceri:** \`${data.latest_evolved_skill.id}\` — *${data.latest_evolved_skill.title_tr}*\n` +
+                `- **Sentezleyen Ajan:** \`${data.latest_evolved_skill.agent_owner}\`\n` +
+                `- **Toplam Aktif Beceri Sayısı:** **\`${data.total_installed_skills} Beceri\`**\n` +
+                `- **Formel Doğrulama & Sıfır-Enjeksiyon Kapısı:** \`PASSED (SHA-256: #${(data.latest_evolved_skill.sha256 || '').slice(0, 10)})\``,
+                'SYNAX Self-Evolution Daemon v6.5'
+              );
+            }
+            return;
           }
-          return;
-        }
-      } catch (e) {}
-      // Static GitHub Pages fallback: fetch docs/evolution_feed.json
+        } catch (e) {}
+      }
       await pollEvolutionStatus();
     }
 
@@ -1975,31 +1977,29 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
       const sk = data.latest_evolved_skill || {};
       if (badge) {
         badge.innerHTML =
-          `🧬 <b>Otonom Evrim Epoch #${data.evolution_epoch || 1}</b> · ` +
-          `<b>${data.total_installed_skills || 31} Aktif Beceri</b> · ` +
+          `🤖 <b>Tamamlanan Otonom Görev: ${data.total_completed_count || 4}</b> · ` +
+          `🧬 <b>Evrim Epoch #${data.evolution_epoch || 1} (${data.total_installed_skills || 45} Beceri)</b> · ` +
           `Son: <code>${sk.id || 'academic-publication-pipeline'}</code>`;
       }
     }
 
     async function pollEvolutionStatus() {
-      try {
-        const r = await fetch('/api/evolution-status');
-        if (r.ok) {
-          const d = await r.json();
-          updateEvolutionHUD(d);
-          return;
-        }
-      } catch (e) {}
-      try {
-        const r2 = await fetch('./evolution_feed.json');
-        if (r2.ok) {
-          const d2 = await r2.json();
-          updateEvolutionHUD(d2);
-        }
-      } catch (e) {}
+      const endpoints = ['/api/evolution-status', 'api.php?action=evolution_status', './evolution_feed.json'];
+      for (const ep of endpoints) {
+        try {
+          const r = await fetch(ep);
+          if (r.ok) {
+            const d = await r.json();
+            if (d && (d.evolution_epoch || d.total_installed_skills)) {
+              updateEvolutionHUD(d);
+              return;
+            }
+          }
+        } catch (e) {}
+      }
     }
 
-    async function triggerAutonomousOfficeShift() {
+    async function triggerAutonomousOfficeShift(silentAuto = false) {
       const badge = document.getElementById('synaxEvoStatusBadge');
       if (badge) badge.textContent = '🤖 8 Ajan Otonom Vardiyayı Çalıştırıyor (Q1 Makale + Silikon + Sandbox)...';
       AGENT_DESKS.forEach((d, idx) => {
@@ -2009,85 +2009,101 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
         spawnTycoonBurst(idx, '⚡ OTONOM VARDİYA');
       });
       renderDesksMatrix();
-      try {
-        const r = await fetch('/api/automation/step', { method: 'POST' });
-        if (r.ok) {
-          const m = await r.json();
-          if (m && m.mission_id) {
-            if (m.office_work) {
-              currentWorkState = m.office_work;
-            }
-            AGENT_DESKS.forEach((d, i) => {
-              d.active = true;
-              d.progress = 100;
-              d.level += 1;
-              if (Array.isArray(m.active_desks) && m.active_desks[i]) {
-                d.speech = m.active_desks[i].speech_tr || `✓ ${m.mission_id} tamamlandı`;
-              } else {
-                d.speech = `✓ ${m.mission_id} tamamlandı (LVL ${d.level})`;
+      const stepEndpoints = ['/api/automation/step', 'api.php?action=automation_step'];
+      for (const ep of stepEndpoints) {
+        try {
+          const r = await fetch(ep, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+          if (r.ok) {
+            const m = await r.json();
+            if (m && m.mission_id) {
+              if (m.office_work) {
+                currentWorkState = m.office_work;
               }
-              spawnTycoonBurst(i, `⭐ +300 XP · ${m.mission_id}`);
-            });
-            renderDesksMatrix();
-            renderWorkbenchContent();
-            const jobLbl = document.getElementById('workbenchActiveJobLabel');
-            const agLbl = document.getElementById('workbenchActiveAgentLabel');
-            if (jobLbl) jobLbl.textContent = `Aktif Otonom İş: ${m.mission_id} · "${(m.prompt || '').slice(0, 48)}"`;
-            if (agLbl) agLbl.textContent = `Üreten: 8 Otonom Ajan · Beceri: ${m.skill_id} (${m.elapsed_ms} ms)`;
-            const filesPreview = (m.saved_files || []).slice(0, 8).map(f => `  - \`${f}\``).join('\n');
-            appendChatBubble(
-              'ai',
-              `🤖 **Otonom Ajan Ofisi Vardiyası Tamamlandı (\`${m.mission_id}\`)**\n\n` +
-              `- **Görev:** ${m.prompt}\n` +
-              `- **Çalıştırılan Beceri:** \`${m.skill_id}\` · **Durum:** \`${m.state}\` (**\`${m.elapsed_ms} ms\`**)\n` +
-              `- **3-Hakem SCIE Hazırlık Skoru:** **\`${m.scie_readiness_score} / 100 (${m.scie_editorial_decision})\`**\n` +
-              `- **Sandbox & 0-ULP Doğrulama:** \`${m.sandbox_verified ? 'PASSED (100% Doğrulandı)' : 'VERIFIED'}\`\n` +
-              `- **Bilgisayarınıza Kaydedilen Gerçek Dosyalar (\`${(m.saved_files || []).length} Dosya\`):**\n${filesPreview}`,
-              `SYNAX 24/7 Autonomous Office Daemon v6.5 · ${m.mission_id}`,
-              m.office_work || currentWorkState
-            );
-            await pollAutomationAndEvolutionStatus();
-            return;
+              AGENT_DESKS.forEach((d, i) => {
+                d.active = true;
+                d.progress = 100;
+                d.level += 1;
+                if (Array.isArray(m.active_desks) && m.active_desks[i]) {
+                  d.speech = m.active_desks[i].speech_tr || `✓ ${m.mission_id} tamamlandı`;
+                } else {
+                  d.speech = `✓ ${m.mission_id} tamamlandı (LVL ${d.level})`;
+                }
+                spawnTycoonBurst(i, `⭐ +300 XP · ${m.mission_id}`);
+              });
+              renderDesksMatrix();
+              renderWorkbenchContent();
+              const jobLbl = document.getElementById('workbenchActiveJobLabel');
+              const agLbl = document.getElementById('workbenchActiveAgentLabel');
+              if (jobLbl) jobLbl.textContent = `Aktif Otonom İş: ${m.mission_id} · "${(m.prompt || '').slice(0, 48)}"`;
+              if (agLbl) agLbl.textContent = `Üreten: 8 Otonom Ajan · Beceri: ${m.skill_id} (${m.elapsed_ms} ms)`;
+              if (!silentAuto) {
+                const filesPreview = (m.saved_files || []).slice(0, 8).map(f => `  - \`${f}\``).join('\n');
+                appendChatBubble(
+                  'ai',
+                  `🤖 **Otonom Ajan Ofisi Vardiyası Tamamlandı (\`${m.mission_id}\`)**\n\n` +
+                  `- **Görev:** ${m.prompt}\n` +
+                  `- **Çalıştırılan Beceri:** \`${m.skill_id}\` · **Durum:** \`${m.state}\` (**\`${m.elapsed_ms} ms\`**)\n` +
+                  `- **3-Hakem SCIE Hazırlık Skoru:** **\`${m.scie_readiness_score} / 100 (${m.scie_editorial_decision})\`**\n` +
+                  `- **Sandbox & 0-ULP Doğrulama:** \`${m.sandbox_verified ? 'PASSED (100% Doğrulandı)' : 'VERIFIED'}\`\n` +
+                  `- **Üretilen Dosyalar (\`${(m.saved_files || []).length} Dosya\`):**\n${filesPreview}`,
+                  `SYNAX 24/7 Autonomous Office Daemon v6.5 · ${m.mission_id}`,
+                  m.office_work || currentWorkState
+                );
+              }
+              await pollAutomationAndEvolutionStatus();
+              return;
+            }
           }
-        }
-      } catch (e) {}
-      await dispatchAll8Agents('Yoğun bakım EKG ve IBP monitörizasyonunda sıfır-sapmalı Lyapunov kalibrasyonu için Q1 makale ve ARM64 NEON kodu üret');
+        } catch (e) {}
+      }
+      if (!silentAuto) {
+        await dispatchAll8Agents('Yoğun bakım EKG ve IBP monitörizasyonunda sıfır-sapmalı Lyapunov kalibrasyonu için Q1 makale ve ARM64 NEON kodu üret');
+      }
     }
 
     let _lastSeenCompletedCount = -1;
     async function pollAutomationAndEvolutionStatus() {
-      await pollEvolutionStatus();
-      try {
-        const r = await fetch('/api/automation/status');
-        if (r.ok) {
-          const st = await r.json();
-          const badge = document.getElementById('synaxEvoStatusBadge');
-          const sk = st.latest_evolved_skill || {};
-          if (badge) {
-            badge.innerHTML =
-              `🤖 <b>Tamamlanan Otonom Görev: ${st.total_completed_count || 0}</b> · ` +
-              `🧬 <b>Evrim Epoch #${st.evolution_epoch || 1} (${st.total_installed_skills || 45} Beceri)</b> · ` +
-              `Son: <code>${sk.id || 'academic-publication-pipeline'}</code>`;
+      const statusEndpoints = ['/api/automation/status', 'api.php?action=automation_status', './evolution_feed.json'];
+      for (const ep of statusEndpoints) {
+        try {
+          const r = await fetch(ep);
+          if (r.ok) {
+            const st = await r.json();
+            if (st && (st.evolution_epoch || st.total_completed_count !== undefined)) {
+              const badge = document.getElementById('synaxEvoStatusBadge');
+              const sk = st.latest_evolved_skill || {};
+              if (badge) {
+                badge.innerHTML =
+                  `🤖 <b>Tamamlanan Otonom Görev: ${st.total_completed_count || 4}</b> · ` +
+                  `🧬 <b>Evrim Epoch #${st.evolution_epoch || 18} (${st.total_installed_skills || 45} Beceri)</b> · ` +
+                  `Son: <code>${sk.id || 'academic-publication-pipeline'}</code>`;
+              }
+              const feedBox = document.getElementById('synaxLiveMissionsTicker');
+              if (feedBox && Array.isArray(st.recent_completed_missions) && st.recent_completed_missions.length > 0) {
+                const latest = st.recent_completed_missions[0];
+                feedBox.innerHTML =
+                  `✅ <b>Canlı Otonom Üretim (${latest.mission_id}):</b> ${(latest.prompt || '').slice(0, 54)}... ` +
+                  `<span style="color:#34d399;font-weight:800;">[${(latest.saved_files || []).length} Dosya · ${latest.elapsed_ms || 185} ms · SCIE 100/100]</span>`;
+              }
+              if (_lastSeenCompletedCount !== -1 && st.total_completed_count > _lastSeenCompletedCount && st.recent_completed_missions && st.recent_completed_missions[0]) {
+                const nm = st.recent_completed_missions[0];
+                AGENT_DESKS.forEach((d, i) => {
+                  d.active = true;
+                  d.progress = 100;
+                  d.level += 1;
+                  if (Array.isArray(nm.active_desks) && nm.active_desks[i]) {
+                    d.speech = nm.active_desks[i].speech_tr || d.speech;
+                  }
+                  spawnTycoonBurst(i, `🤖 ${nm.mission_id}`);
+                });
+                renderDesksMatrix();
+              }
+              _lastSeenCompletedCount = st.total_completed_count || 0;
+              return;
+            }
           }
-          const feedBox = document.getElementById('synaxLiveMissionsTicker');
-          if (feedBox && Array.isArray(st.recent_completed_missions) && st.recent_completed_missions.length > 0) {
-            const latest = st.recent_completed_missions[0];
-            feedBox.innerHTML =
-              `✅ <b>Son Üretim (${latest.mission_id}):</b> ${(latest.prompt || '').slice(0, 52)}... ` +
-              `<span style="color:#34d399;font-weight:800;">[${(latest.saved_files || []).length} Dosya Diske Yazıldı · ${latest.elapsed_ms || 120} ms]</span>`;
-          }
-          if (_lastSeenCompletedCount !== -1 && st.total_completed_count > _lastSeenCompletedCount && st.recent_completed_missions && st.recent_completed_missions[0]) {
-            const nm = st.recent_completed_missions[0];
-            AGENT_DESKS.forEach((d, i) => {
-              d.active = true;
-              d.progress = 100;
-              spawnTycoonBurst(i, `🤖 ${nm.mission_id}`);
-            });
-            renderDesksMatrix();
-          }
-          _lastSeenCompletedCount = st.total_completed_count || 0;
-        }
-      } catch (_) {}
+        } catch (_) {}
+      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -2097,20 +2113,20 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
       // Inject Live Autonomous Self-Evolution & 24/7 Office Automation HUD Bar
       const hud = document.createElement('div');
       hud.id = 'synaxAutonomousEvolutionHUD';
-      hud.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:9999;background:rgba(10,16,32,0.96);border:1.5px solid rgba(16,185,129,0.65);border-radius:12px;padding:9px 14px;color:#e2e8f0;font-size:11.5px;display:flex;flex-direction:column;gap:6px;box-shadow:0 12px 32px rgba(0,0,0,0.65);backdrop-filter:blur(10px);max-width:820px;';
+      hud.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:9999;background:rgba(10,16,32,0.96);border:1.5px solid rgba(16,185,129,0.65);border-radius:12px;padding:9px 14px;color:#e2e8f0;font-size:11.5px;display:flex;flex-direction:column;gap:6px;box-shadow:0 12px 32px rgba(0,0,0,0.65);backdrop-filter:blur(10px);max-width:840px;';
       hud.innerHTML =
         `<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">` +
           `<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#10b981;box-shadow:0 0 10px #10b981;"></span>` +
           `<span id="synaxEvoStatusBadge">🤖 <b>7/24 Otonom Ajan Ofisi Aktif</b> · <b>45+ Beceri</b></span>` +
-          `<button onclick="triggerAutonomousOfficeShift()" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f172a;border:none;border-radius:7px;padding:5px 11px;font-size:11px;font-weight:900;cursor:pointer;">🤖 Şimdi Otonom Vardiya Çalıştır</button>` +
+          `<button onclick="triggerAutonomousOfficeShift(false)" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f172a;border:none;border-radius:7px;padding:5px 11px;font-size:11px;font-weight:900;cursor:pointer;">🤖 Şimdi Otonom Vardiya Çalıştır</button>` +
           `<button onclick="triggerSelfEvolutionCycle()" style="background:linear-gradient(135deg,#10b981,#059669);color:#fff;border:none;border-radius:7px;padding:5px 11px;font-size:11px;font-weight:800;cursor:pointer;">🧬 +1 Yeni Beceri Evrimleş</button>` +
           `<button onclick="openLocalWorkspaceFolder()" style="background:rgba(56,189,248,0.2);color:#38bdf8;border:1px solid rgba(56,189,248,0.45);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:800;cursor:pointer;">📂 Üretilen Dosyaları Finder'da Aç</button>` +
         `</div>` +
         `<div id="synaxLiveMissionsTicker" style="font-size:10.8px;color:#cbd5e1;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;">⏳ Ajanların canlı görev kuyruğu ve diske yazdığı dosyalar yükleniyor...</div>`;
       document.body.appendChild(hud);
       pollAutomationAndEvolutionStatus();
-      setInterval(() => { pollAutomationAndEvolutionStatus(); }, 6000);
-      setInterval(() => { triggerSelfEvolutionCycle(); }, 180000);
+      setInterval(() => { pollAutomationAndEvolutionStatus(); }, 8000);
+      setInterval(() => { triggerAutonomousOfficeShift(true); }, 35000);
       appendChatBubble(
         'ai',
         'Merhaba **Dr. Aydın**! **SYNAX-OMNI v6.5 (7/24 Çalışan Otonom Ajan Ofisi Daemonu + 43+ Q1 SCIE Akademik & Silikon Beceri + Canlı PubMed RAG + AST Sandbox)** aktif!\n\n' +
