@@ -1997,6 +1997,42 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
       }
     }
 
+    let _lastSeenCompletedCount = -1;
+    async function pollAutomationAndEvolutionStatus() {
+      await pollEvolutionStatus();
+      try {
+        const r = await fetch('/api/automation/status');
+        if (r.ok) {
+          const st = await r.json();
+          const badge = document.getElementById('synaxEvoStatusBadge');
+          const sk = st.latest_evolved_skill || {};
+          if (badge) {
+            badge.innerHTML =
+              `🤖 <b>Tamamlanan Otonom Görev: ${st.total_completed_count || 0}</b> · ` +
+              `🧬 <b>Evrim Epoch #${st.evolution_epoch || 1} (${st.total_installed_skills || 45} Beceri)</b> · ` +
+              `Son: <code>${sk.id || 'academic-publication-pipeline'}</code>`;
+          }
+          const feedBox = document.getElementById('synaxLiveMissionsTicker');
+          if (feedBox && Array.isArray(st.recent_completed_missions) && st.recent_completed_missions.length > 0) {
+            const latest = st.recent_completed_missions[0];
+            feedBox.innerHTML =
+              `✅ <b>Son Üretim (${latest.mission_id}):</b> ${(latest.prompt || '').slice(0, 52)}... ` +
+              `<span style="color:#34d399;font-weight:800;">[${(latest.saved_files || []).length} Dosya Diske Yazıldı · ${latest.elapsed_ms || 120} ms]</span>`;
+          }
+          if (_lastSeenCompletedCount !== -1 && st.total_completed_count > _lastSeenCompletedCount && st.recent_completed_missions && st.recent_completed_missions[0]) {
+            const nm = st.recent_completed_missions[0];
+            AGENT_DESKS.forEach((d, i) => {
+              d.active = true;
+              d.progress = 100;
+              spawnTycoonBurst(i, `🤖 ${nm.mission_id}`);
+            });
+            renderDesksMatrix();
+          }
+          _lastSeenCompletedCount = st.total_completed_count || 0;
+        }
+      } catch (_) {}
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       renderDesksMatrix();
       renderWorkbenchContent();
