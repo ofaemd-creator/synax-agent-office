@@ -1,268 +1,133 @@
 {
   "engine_version": "6.4.0",
-  "evolution_epoch": 3030,
+  "evolution_epoch": 3665,
   "base_skills_count": 21,
   "evolved_skills": [
     {
       "id": "bayesian-meta-regression",
-      "epoch": 3021,
+      "epoch": 3661,
       "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
       "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
       "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "94869adcaecc28607af8aa2dc4efb8aa1520e792fb2d80a2ce1bcd119f81b073",
+      "sha256": "44838dd1b8a87a219cad11605b057c5be761a6c6ce8f933d694a62fde7879f09",
       "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:37:26 UTC"
+      "timestamp_utc": "2026-11-23 21:13:53 UTC"
     },
     {
       "id": "survival-kaplan-meier-cox",
-      "epoch": 3022,
+      "epoch": 3662,
       "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
       "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
       "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "ec9199522940af9514fc7bac25572dacd53a84284e60949d4e7ffb3c0f1ff623",
+      "sha256": "8d4b88fe2e9dfd81c36fa0f9b56328197fd5f438157822fa28261b4576ab5a16",
       "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:37:37 UTC"
+      "timestamp_utc": "2026-11-23 21:14:04 UTC"
     },
     {
       "id": "diagnostic-roc-delong-audit",
-      "epoch": 3023,
+      "epoch": 3663,
       "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
       "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
       "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
       "agent_owner": "Agent-Scholar & Agent-Biostat",
-      "sha256": "1a1a88ed7ceb9f39857cca460c12289c4dad5ccfcf9ed33276a6362a64748a7a",
+      "sha256": "1aa03c986a051e32d7a523d7591622170bd8f3d8e6990705d7b27168a9d6c83a",
       "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:37:47 UTC"
+      "timestamp_utc": "2026-11-23 21:14:09 UTC"
     },
     {
       "id": "clinical-trial-power-simulator",
-      "epoch": 3024,
+      "epoch": 3664,
       "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
       "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
       "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "947ed73b1307edfdb2989fdaea348c10e8f0fe371bf2bf80fbc028ae30dc5ec7",
+      "sha256": "191d41469839be8fd7af387ee7066553cfbc6be0a2b08b89eca5f9226026183f",
       "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:37:58 UTC"
+      "timestamp_utc": "2026-11-23 21:14:13 UTC"
     },
     {
       "id": "equator-consort-ai-extension",
-      "epoch": 3025,
+      "epoch": 3665,
       "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
       "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
       "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
       "agent_owner": "Agent-Peer-Reviewer",
-      "sha256": "dd5896422a16974ea5493366b9528df60287d08ea8da89167cb617ccefc21969",
+      "sha256": "6ac08e4f139ed9b68096fef3f4cff1caf6776f923f1ecc8e38e1d68b47b7efbc",
       "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:38:09 UTC"
+      "timestamp_utc": "2026-11-23 21:14:16 UTC"
     },
     {
       "id": "icu-waveform-kalman-denoiser",
-      "epoch": 3026,
+      "epoch": 3656,
       "title_tr": "Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı",
       "desc_tr": "500 Hz yoğun bakım EKG ve arter basıncı dalga formlarında hareket artefaktı ve elektrokoter gürültüsünü bastıran Kalman-Lyapunov çekirdeği",
       "desc_en": "Real-time adaptive Kalman-Lyapunov state estimation suppressing motion artifacts and electrosurgical interference in 500 Hz ICU ECG and arterial pressure waveforms.",
       "agent_owner": "Agent-Lyapunov (Masa 4)",
-      "sha256": "12381628bcb98518c5e0320e8ca942eb255bf793ef918ebd82380886da1ddd6e",
+      "sha256": "7759bfa19348d9a305fb49a3247b5a0c5f57eaf7db7962d43664ac7ae8f8065f",
       "installed_path": "skills/icu-waveform-kalman-denoiser/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:38:12 UTC"
+      "timestamp_utc": "2026-11-23 21:13:02 UTC"
     },
     {
       "id": "multisilicon-simd-autotuner",
-      "epoch": 3027,
+      "epoch": 3657,
       "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
       "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
       "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
       "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-      "sha256": "1a4e72da7484fa8b2d7f6deee21f0a9e562705d73c16479ce7dac8f26429371f",
+      "sha256": "e1e1b8cbe18ba759807c29a88b24b690afd3447d7789b8f7552cc6ee21cf9a2b",
       "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:38:19 UTC"
+      "timestamp_utc": "2026-11-23 21:13:12 UTC"
     },
     {
       "id": "network-meta-analysis-grade",
-      "epoch": 3028,
+      "epoch": 3658,
       "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
       "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
       "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
       "agent_owner": "Agent-Biostat & Agent-Scholar",
-      "sha256": "7b4b6afb5921f5ab1897af0f4544437e5bbb2cd646171dbe1b6fe6b73ec1731e",
+      "sha256": "15329e4a8ef376adaeef17a2fab6d21e692b3b1204983e529ae73dbb7e648de3",
       "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:38:29 UTC"
+      "timestamp_utc": "2026-11-23 21:13:22 UTC"
     },
     {
       "id": "individual-participant-data-ipd",
-      "epoch": 3029,
+      "epoch": 3659,
       "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
       "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
       "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "e2d41ee46e5678c4f95890ccaff88059d85683842de574b33d8bb99c5a2039cf",
+      "sha256": "9cefb18de1f78c99b3fb0e263388edadba26a96080a4483a72b1a8214a361678",
       "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:38:39 UTC"
+      "timestamp_utc": "2026-11-23 21:13:32 UTC"
     },
     {
       "id": "propensity-score-causal-matching",
-      "epoch": 3030,
+      "epoch": 3660,
       "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
       "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
       "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
       "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-      "sha256": "19366177a25a05756eaabeddbc4bca5d689d43bead46a699fd37a870aaa710ee",
+      "sha256": "c2b1106c0574704a06e9e06f5a772d80dd246891064be79196311cb818ef0163",
       "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-      "timestamp_utc": "2026-11-23 19:38:40 UTC"
+      "timestamp_utc": "2026-11-23 21:13:42 UTC"
     }
   ],
   "history": [
     {
-      "epoch": 2981,
-      "timestamp_utc": "2026-11-23 19:31:35 UTC",
-      "synthesized_skill": {
-        "id": "bayesian-meta-regression",
-        "epoch": 2981,
-        "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
-        "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
-        "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
-        "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "11ea1d66d603516a38578799d81a81add48b7f7ca3d0a315cd2068da44fb7dcd",
-        "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:31:35 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #2981: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 2982,
-      "timestamp_utc": "2026-11-23 19:31:46 UTC",
-      "synthesized_skill": {
-        "id": "survival-kaplan-meier-cox",
-        "epoch": 2982,
-        "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
-        "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
-        "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
-        "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "95a5c6d16e962d8f3ca8d78fdec6522255475f96cbf961b359bd87463827c26e",
-        "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:31:46 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #2982: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 2983,
-      "timestamp_utc": "2026-11-23 19:31:56 UTC",
-      "synthesized_skill": {
-        "id": "diagnostic-roc-delong-audit",
-        "epoch": 2983,
-        "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
-        "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
-        "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
-        "agent_owner": "Agent-Scholar & Agent-Biostat",
-        "sha256": "8341901eb61c7b6a7483b5126d17d220c084542eba069799ef8707eb3735cd49",
-        "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:31:56 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #2983: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 2984,
-      "timestamp_utc": "2026-11-23 19:32:06 UTC",
-      "synthesized_skill": {
-        "id": "clinical-trial-power-simulator",
-        "epoch": 2984,
-        "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
-        "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
-        "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
-        "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "14e8e20cf096d26fd6c18c2d75aa470ea02dfef4395773015e5a40cf3bbeaca1",
-        "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:06 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #2984: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 2985,
-      "timestamp_utc": "2026-11-23 19:32:10 UTC",
-      "synthesized_skill": {
-        "id": "equator-consort-ai-extension",
-        "epoch": 2985,
-        "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
-        "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
-        "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
-        "agent_owner": "Agent-Peer-Reviewer",
-        "sha256": "90de43da80d34a2a31e04204b4694176458e2fd38af5fd4f0fae2d54a5ee6d66",
-        "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:10 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #2985: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 2986,
-      "timestamp_utc": "2026-11-23 19:32:17 UTC",
+      "epoch": 3616,
+      "timestamp_utc": "2026-11-23 21:07:05 UTC",
       "synthesized_skill": {
         "id": "icu-waveform-kalman-denoiser",
-        "epoch": 2986,
+        "epoch": 3616,
         "title_tr": "Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı",
         "desc_tr": "500 Hz yoğun bakım EKG ve arter basıncı dalga formlarında hareket artefaktı ve elektrokoter gürültüsünü bastıran Kalman-Lyapunov çekirdeği",
         "desc_en": "Real-time adaptive Kalman-Lyapunov state estimation suppressing motion artifacts and electrosurgical interference in 500 Hz ICU ECG and arterial pressure waveforms.",
         "agent_owner": "Agent-Lyapunov (Masa 4)",
-        "sha256": "7a3b68ef72fc85598ba106822432b62721a5b3edf973676136a99477d4987253",
+        "sha256": "1183f3666b989cb462d7c06dbc5e5238ff7f2927a9df3190b67049942c2b5731",
         "installed_path": "skills/icu-waveform-kalman-denoiser/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:17 UTC"
+        "timestamp_utc": "2026-11-23 21:07:05 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -272,24 +137,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2986: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
+        "Epoch #3616: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2987,
-      "timestamp_utc": "2026-11-23 19:32:27 UTC",
+      "epoch": 3617,
+      "timestamp_utc": "2026-11-23 21:07:15 UTC",
       "synthesized_skill": {
         "id": "multisilicon-simd-autotuner",
-        "epoch": 2987,
+        "epoch": 3617,
         "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
         "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
         "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
         "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-        "sha256": "8c5c643cbaad54c5d7b8375a07d64b4a80b3a25a346b08cc7a824532d9108b06",
+        "sha256": "ff3eacc8b0dd06d2237713720bb97abb1e0fb415fca85b7655ebb3f0ef4c0eb5",
         "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:27 UTC"
+        "timestamp_utc": "2026-11-23 21:07:15 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -299,24 +164,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2987: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
+        "Epoch #3617: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2988,
-      "timestamp_utc": "2026-11-23 19:32:37 UTC",
+      "epoch": 3618,
+      "timestamp_utc": "2026-11-23 21:07:25 UTC",
       "synthesized_skill": {
         "id": "network-meta-analysis-grade",
-        "epoch": 2988,
+        "epoch": 3618,
         "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
         "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
         "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
         "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "f7bc7eab7944c0fdd8e539d8626e4acd22a195399de035c913314b4e8ff0b939",
+        "sha256": "668d57a61c2ea17f2bf2fbfc2283f968126f0c1be5f26340e49464a90383c6da",
         "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:37 UTC"
+        "timestamp_utc": "2026-11-23 21:07:25 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -326,24 +191,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2988: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
+        "Epoch #3618: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2989,
-      "timestamp_utc": "2026-11-23 19:32:48 UTC",
+      "epoch": 3619,
+      "timestamp_utc": "2026-11-23 21:07:35 UTC",
       "synthesized_skill": {
         "id": "individual-participant-data-ipd",
-        "epoch": 2989,
+        "epoch": 3619,
         "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
         "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
         "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "7cffb2f5e9c969fabfd3b2d782903d91d5660be73226afc93b64f375aa307478",
+        "sha256": "05f6d807e462e0a9ea3d7316083b4ddd14849c596120829553ddd99b40782665",
         "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:48 UTC"
+        "timestamp_utc": "2026-11-23 21:07:35 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -353,24 +218,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2989: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
+        "Epoch #3619: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2990,
-      "timestamp_utc": "2026-11-23 19:32:58 UTC",
+      "epoch": 3620,
+      "timestamp_utc": "2026-11-23 21:07:46 UTC",
       "synthesized_skill": {
         "id": "propensity-score-causal-matching",
-        "epoch": 2990,
+        "epoch": 3620,
         "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
         "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
         "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
         "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-        "sha256": "1f2a7134215a38f5d8b68323c888a907404d5fe1db904f1e325c18bde31d009a",
+        "sha256": "c1b256a7e41a905b383dc37542a6014a2ad2e702d38a6c617046b806e7965c17",
         "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:32:58 UTC"
+        "timestamp_utc": "2026-11-23 21:07:46 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -380,24 +245,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2990: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
+        "Epoch #3620: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2991,
-      "timestamp_utc": "2026-11-23 19:33:08 UTC",
+      "epoch": 3621,
+      "timestamp_utc": "2026-11-23 21:07:58 UTC",
       "synthesized_skill": {
         "id": "bayesian-meta-regression",
-        "epoch": 2991,
+        "epoch": 3621,
         "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
         "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
         "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "7fade4d34d20d0ac7ed0d298598eeb3e8b1ac37cda1af9fd603f364f374316d2",
+        "sha256": "d54a06e245a6b151ecf3b8689806e13206ac899a0c877df931a3bb47300239ce",
         "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:33:08 UTC"
+        "timestamp_utc": "2026-11-23 21:07:58 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -407,24 +272,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2991: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
+        "Epoch #3621: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2992,
-      "timestamp_utc": "2026-11-23 19:33:19 UTC",
+      "epoch": 3622,
+      "timestamp_utc": "2026-11-23 21:08:06 UTC",
       "synthesized_skill": {
         "id": "survival-kaplan-meier-cox",
-        "epoch": 2992,
+        "epoch": 3622,
         "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
         "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
         "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "b271161765f21ebe8db2c4c07878dcd102047b05fcfa67c8490d5862f2b59a19",
+        "sha256": "c1b57f3c1c3aaf09f4d872c8611206da015c424d908e695c683c133139c34743",
         "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:33:19 UTC"
+        "timestamp_utc": "2026-11-23 21:08:06 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -434,24 +299,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2992: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Epoch #3622: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2993,
-      "timestamp_utc": "2026-11-23 19:33:29 UTC",
+      "epoch": 3623,
+      "timestamp_utc": "2026-11-23 21:08:13 UTC",
       "synthesized_skill": {
         "id": "diagnostic-roc-delong-audit",
-        "epoch": 2993,
+        "epoch": 3623,
         "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
         "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
         "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
         "agent_owner": "Agent-Scholar & Agent-Biostat",
-        "sha256": "0530dd9df89955b011582b54f62a28c7e86a444c6d7195b0d364f23eaf566db0",
+        "sha256": "e79d046edf46fd5d94df942a40eda9e320a1083117ab22a7b0d4840c526eacd4",
         "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:33:29 UTC"
+        "timestamp_utc": "2026-11-23 21:08:13 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -461,24 +326,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2993: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
+        "Epoch #3623: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2994,
-      "timestamp_utc": "2026-11-23 19:33:39 UTC",
+      "epoch": 3624,
+      "timestamp_utc": "2026-11-23 21:08:17 UTC",
       "synthesized_skill": {
         "id": "clinical-trial-power-simulator",
-        "epoch": 2994,
+        "epoch": 3624,
         "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
         "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
         "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "a8790dcfe00e236e7b8da0da6dad805d57c8b997419fd72982c7e1e4ca40ec15",
+        "sha256": "c51f1741402e3e4730f278529ec32f204da900471c702d1b617b5932ee5ed630",
         "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:33:39 UTC"
+        "timestamp_utc": "2026-11-23 21:08:17 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -488,24 +353,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2994: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
+        "Epoch #3624: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2995,
-      "timestamp_utc": "2026-11-23 19:33:41 UTC",
+      "epoch": 3625,
+      "timestamp_utc": "2026-11-23 21:08:28 UTC",
       "synthesized_skill": {
         "id": "equator-consort-ai-extension",
-        "epoch": 2995,
+        "epoch": 3625,
         "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
         "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
         "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
         "agent_owner": "Agent-Peer-Reviewer",
-        "sha256": "ed69336b6836485243d3f660495d83bc5e13430ce0e23098ade1be3ad9ca03ee",
+        "sha256": "43cd4c50d6f2b77c03a835387963a900939995487689b0c1213c7a009398a410",
         "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:33:41 UTC"
+        "timestamp_utc": "2026-11-23 21:08:28 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -515,24 +380,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2995: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
+        "Epoch #3625: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2996,
-      "timestamp_utc": "2026-11-23 19:33:50 UTC",
+      "epoch": 3626,
+      "timestamp_utc": "2026-11-23 21:08:40 UTC",
       "synthesized_skill": {
         "id": "icu-waveform-kalman-denoiser",
-        "epoch": 2996,
+        "epoch": 3626,
         "title_tr": "Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı",
         "desc_tr": "500 Hz yoğun bakım EKG ve arter basıncı dalga formlarında hareket artefaktı ve elektrokoter gürültüsünü bastıran Kalman-Lyapunov çekirdeği",
         "desc_en": "Real-time adaptive Kalman-Lyapunov state estimation suppressing motion artifacts and electrosurgical interference in 500 Hz ICU ECG and arterial pressure waveforms.",
         "agent_owner": "Agent-Lyapunov (Masa 4)",
-        "sha256": "0ca397b990d981f859a792b18bc7320cf16e6fe87abc061dbb96897d719fd50d",
+        "sha256": "fb73b3809e04d2174c369f41c4f23ae36c9023c90720f129aee7e5ce5a7fec9c",
         "installed_path": "skills/icu-waveform-kalman-denoiser/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:33:50 UTC"
+        "timestamp_utc": "2026-11-23 21:08:40 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -542,24 +407,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2996: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
+        "Epoch #3626: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2997,
-      "timestamp_utc": "2026-11-23 19:34:00 UTC",
+      "epoch": 3627,
+      "timestamp_utc": "2026-11-23 21:08:44 UTC",
       "synthesized_skill": {
         "id": "multisilicon-simd-autotuner",
-        "epoch": 2997,
+        "epoch": 3627,
         "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
         "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
         "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
         "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-        "sha256": "dc51eecd272d4d066e1d7ee73eb69e9c8bce2b27da87301762c6300e39d3deb2",
+        "sha256": "523a299d4cef30625e6689e1f2baeb15a0bacbeb51e7db52dae3481bfb7823ca",
         "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:00 UTC"
+        "timestamp_utc": "2026-11-23 21:08:44 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -569,24 +434,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2997: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
+        "Epoch #3627: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2998,
-      "timestamp_utc": "2026-11-23 19:34:09 UTC",
+      "epoch": 3628,
+      "timestamp_utc": "2026-11-23 21:08:48 UTC",
       "synthesized_skill": {
         "id": "network-meta-analysis-grade",
-        "epoch": 2998,
+        "epoch": 3628,
         "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
         "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
         "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
         "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "3014aa76f2e2d855d4b4a2a6ab719e85df8aaa5cb403e5259f20040ab688aff5",
+        "sha256": "ea795e3cde9535b9f6eb001f7c90376bb1991a2d84cc9cd5923051316bfb600a",
         "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:09 UTC"
+        "timestamp_utc": "2026-11-23 21:08:48 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -596,24 +461,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2998: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
+        "Epoch #3628: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 2999,
-      "timestamp_utc": "2026-11-23 19:34:10 UTC",
+      "epoch": 3629,
+      "timestamp_utc": "2026-11-23 21:08:59 UTC",
       "synthesized_skill": {
         "id": "individual-participant-data-ipd",
-        "epoch": 2999,
+        "epoch": 3629,
         "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
         "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
         "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "f8627c39aa35aef9ca6efbde836c3baabacc8de7bb8fd2131171d188e4c2ee88",
+        "sha256": "ce1c79ecb91e6c44d1c6bff8641a93311f8ff0f7c21a074c480969e5f4c927b2",
         "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:10 UTC"
+        "timestamp_utc": "2026-11-23 21:08:59 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -623,24 +488,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #2999: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
+        "Epoch #3629: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3000,
-      "timestamp_utc": "2026-11-23 19:34:20 UTC",
+      "epoch": 3630,
+      "timestamp_utc": "2026-11-23 21:09:10 UTC",
       "synthesized_skill": {
         "id": "propensity-score-causal-matching",
-        "epoch": 3000,
+        "epoch": 3630,
         "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
         "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
         "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
         "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-        "sha256": "f44afc57cd34b1d2e3e406bb5bc60775a3165ed370f83814f7e450cc9d5ea4fe",
+        "sha256": "9d696a9f36488d21eb39ce8191a683d45c18c60b25f32c3b1051e5b12a687b3f",
         "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:20 UTC"
+        "timestamp_utc": "2026-11-23 21:09:10 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -650,24 +515,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3000: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
+        "Epoch #3630: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3001,
-      "timestamp_utc": "2026-11-23 19:34:31 UTC",
+      "epoch": 3631,
+      "timestamp_utc": "2026-11-23 21:09:20 UTC",
       "synthesized_skill": {
         "id": "bayesian-meta-regression",
-        "epoch": 3001,
+        "epoch": 3631,
         "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
         "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
         "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "ed5ae5389c364789cffed083669492a46ff8e19ecbb81fccf64e396e9a80bfb6",
+        "sha256": "3982de3bfd2c3d9b45fbef27368f181a3c789f6d9f34fd1eefda761fe8948485",
         "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:31 UTC"
+        "timestamp_utc": "2026-11-23 21:09:20 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -677,24 +542,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3001: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
+        "Epoch #3631: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3002,
-      "timestamp_utc": "2026-11-23 19:34:41 UTC",
+      "epoch": 3632,
+      "timestamp_utc": "2026-11-23 21:09:32 UTC",
       "synthesized_skill": {
         "id": "survival-kaplan-meier-cox",
-        "epoch": 3002,
+        "epoch": 3632,
         "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
         "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
         "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "94a8159d53242f878de2a505a1200bc253fcfb53b18722c20c2c99334b492d5b",
+        "sha256": "8a3c5733ea59beab1324998e8f30479bd8a92aeec742e06f35643cb9ea3ed556",
         "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:41 UTC"
+        "timestamp_utc": "2026-11-23 21:09:32 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -704,24 +569,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3002: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Epoch #3632: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3003,
-      "timestamp_utc": "2026-11-23 19:34:51 UTC",
+      "epoch": 3633,
+      "timestamp_utc": "2026-11-23 21:09:42 UTC",
       "synthesized_skill": {
         "id": "diagnostic-roc-delong-audit",
-        "epoch": 3003,
+        "epoch": 3633,
         "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
         "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
         "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
         "agent_owner": "Agent-Scholar & Agent-Biostat",
-        "sha256": "81995f94333e43d9ca50739163316dea2d101da1cd8860b2ef138dde9e630d22",
+        "sha256": "91582879d75e14134ba430cbb6c96db6febfe030397d39eca79cf417474bd203",
         "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:34:51 UTC"
+        "timestamp_utc": "2026-11-23 21:09:42 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -731,24 +596,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3003: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
+        "Epoch #3633: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3004,
-      "timestamp_utc": "2026-11-23 19:35:02 UTC",
+      "epoch": 3634,
+      "timestamp_utc": "2026-11-23 21:09:48 UTC",
       "synthesized_skill": {
         "id": "clinical-trial-power-simulator",
-        "epoch": 3004,
+        "epoch": 3634,
         "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
         "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
         "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "0013549faf8049c968f014d5c576e37837c0ac66fba78c5b34bfcd3c42455805",
+        "sha256": "e904bfe6db9235bb20cf96f329dbde26d337878195023d7cf013d30535902a0b",
         "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:02 UTC"
+        "timestamp_utc": "2026-11-23 21:09:48 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -758,24 +623,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3004: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
+        "Epoch #3634: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3005,
-      "timestamp_utc": "2026-11-23 19:35:11 UTC",
+      "epoch": 3635,
+      "timestamp_utc": "2026-11-23 21:09:51 UTC",
       "synthesized_skill": {
         "id": "equator-consort-ai-extension",
-        "epoch": 3005,
+        "epoch": 3635,
         "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
         "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
         "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
         "agent_owner": "Agent-Peer-Reviewer",
-        "sha256": "916629dc1b5b8d24e9d0e9d02a8b116f95a3b44e13efa20d304f8ed053ea57ec",
+        "sha256": "e93eb3e5f229a73a2ea7f5e10c09b8528146d555f9d561b713ccc482fa5a02e2",
         "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:11 UTC"
+        "timestamp_utc": "2026-11-23 21:09:51 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -785,24 +650,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3005: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
+        "Epoch #3635: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3006,
-      "timestamp_utc": "2026-11-23 19:35:12 UTC",
+      "epoch": 3636,
+      "timestamp_utc": "2026-11-23 21:10:02 UTC",
       "synthesized_skill": {
         "id": "icu-waveform-kalman-denoiser",
-        "epoch": 3006,
+        "epoch": 3636,
         "title_tr": "Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı",
         "desc_tr": "500 Hz yoğun bakım EKG ve arter basıncı dalga formlarında hareket artefaktı ve elektrokoter gürültüsünü bastıran Kalman-Lyapunov çekirdeği",
         "desc_en": "Real-time adaptive Kalman-Lyapunov state estimation suppressing motion artifacts and electrosurgical interference in 500 Hz ICU ECG and arterial pressure waveforms.",
         "agent_owner": "Agent-Lyapunov (Masa 4)",
-        "sha256": "1e36f31c4143cd10e21fc22cd8c7cd13734382a82c187f9e141b416c061eda17",
+        "sha256": "0ad9dab75edd4c6a8097e0017aa68217c3a21544585da2c31e5f8e7dbde1d0a4",
         "installed_path": "skills/icu-waveform-kalman-denoiser/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:12 UTC"
+        "timestamp_utc": "2026-11-23 21:10:02 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -812,24 +677,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3006: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
+        "Epoch #3636: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3007,
-      "timestamp_utc": "2026-11-23 19:35:22 UTC",
+      "epoch": 3637,
+      "timestamp_utc": "2026-11-23 21:10:12 UTC",
       "synthesized_skill": {
         "id": "multisilicon-simd-autotuner",
-        "epoch": 3007,
+        "epoch": 3637,
         "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
         "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
         "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
         "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-        "sha256": "1122c6d00e8b8ac0dda1a953a7b6dd01e85de161f35838c5255b4c2cafdbc77e",
+        "sha256": "2f3ced7c414001d9caa860fa5dad213849d08ac7d895c7b1dcc7faec286d1516",
         "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:22 UTC"
+        "timestamp_utc": "2026-11-23 21:10:12 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -839,24 +704,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3007: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
+        "Epoch #3637: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3008,
-      "timestamp_utc": "2026-11-23 19:35:33 UTC",
+      "epoch": 3638,
+      "timestamp_utc": "2026-11-23 21:10:24 UTC",
       "synthesized_skill": {
         "id": "network-meta-analysis-grade",
-        "epoch": 3008,
+        "epoch": 3638,
         "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
         "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
         "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
         "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "e369f13cf3697fe0771958c2c5f5e4e5caeff385413f165436c8eef6b4de1921",
+        "sha256": "708c5a2124042fac5a77ec0a5a7bd8dc433083e1576cc2cf88e5be18c7e783d4",
         "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:33 UTC"
+        "timestamp_utc": "2026-11-23 21:10:24 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -866,24 +731,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3008: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
+        "Epoch #3638: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3009,
-      "timestamp_utc": "2026-11-23 19:35:43 UTC",
+      "epoch": 3639,
+      "timestamp_utc": "2026-11-23 21:10:35 UTC",
       "synthesized_skill": {
         "id": "individual-participant-data-ipd",
-        "epoch": 3009,
+        "epoch": 3639,
         "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
         "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
         "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "e9396a1874c40c77e1a09fd63c7ab24d3bbd3eb183bac183af3c73f8e83686e6",
+        "sha256": "cad990813e6f6e499a0a2cbc55d07012f97c41b92bde884980dcb58600b0d4f0",
         "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:43 UTC"
+        "timestamp_utc": "2026-11-23 21:10:35 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -893,24 +758,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3009: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
+        "Epoch #3639: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3010,
-      "timestamp_utc": "2026-11-23 19:35:53 UTC",
+      "epoch": 3640,
+      "timestamp_utc": "2026-11-23 21:10:45 UTC",
       "synthesized_skill": {
         "id": "propensity-score-causal-matching",
-        "epoch": 3010,
+        "epoch": 3640,
         "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
         "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
         "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
         "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-        "sha256": "0b7f0e89b4bc8283d51e7e380bdad65b27c2449b9715c3e6c567dc0b2aa8f806",
+        "sha256": "72f211eea34b107b1161d600fcb5b277f3fbd22ea419f20899bf0f4c9f2acc92",
         "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:35:53 UTC"
+        "timestamp_utc": "2026-11-23 21:10:45 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -920,24 +785,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3010: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
+        "Epoch #3640: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3011,
-      "timestamp_utc": "2026-11-23 19:36:04 UTC",
+      "epoch": 3641,
+      "timestamp_utc": "2026-11-23 21:10:55 UTC",
       "synthesized_skill": {
         "id": "bayesian-meta-regression",
-        "epoch": 3011,
+        "epoch": 3641,
         "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
         "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
         "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "9ca08a8421204870bbc54adc9c01790dc7d04c1aac1391fd4c1f262268111e84",
+        "sha256": "54df1dc20eecc40f11dcc83aa6996aac7e998c2e3c5c6b8d7e81ff09a19d9fcf",
         "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:04 UTC"
+        "timestamp_utc": "2026-11-23 21:10:55 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -947,24 +812,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3011: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
+        "Epoch #3641: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3012,
-      "timestamp_utc": "2026-11-23 19:36:14 UTC",
+      "epoch": 3642,
+      "timestamp_utc": "2026-11-23 21:11:05 UTC",
       "synthesized_skill": {
         "id": "survival-kaplan-meier-cox",
-        "epoch": 3012,
+        "epoch": 3642,
         "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
         "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
         "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "f70d7dd15dee9ca7583555747b8f343ac13037b2af2d5ba3c19764d8984a68a2",
+        "sha256": "db4bf0abad6ea47b963d3abd435ee27521f0959e477a4440cea053f51dda8ebd",
         "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:14 UTC"
+        "timestamp_utc": "2026-11-23 21:11:05 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -974,24 +839,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3012: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Epoch #3642: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3013,
-      "timestamp_utc": "2026-11-23 19:36:24 UTC",
+      "epoch": 3643,
+      "timestamp_utc": "2026-11-23 21:11:16 UTC",
       "synthesized_skill": {
         "id": "diagnostic-roc-delong-audit",
-        "epoch": 3013,
+        "epoch": 3643,
         "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
         "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
         "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
         "agent_owner": "Agent-Scholar & Agent-Biostat",
-        "sha256": "dc4a345279d8fd8d6d26a859e07ec4cba166354f447d12ea0b646227c192f07c",
+        "sha256": "d2e2682df6c8d8e63b56b2e64f1847b5a5c756596ca62bd4b25bc4912aed0575",
         "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:24 UTC"
+        "timestamp_utc": "2026-11-23 21:11:16 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1001,24 +866,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3013: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
+        "Epoch #3643: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3014,
-      "timestamp_utc": "2026-11-23 19:36:35 UTC",
+      "epoch": 3644,
+      "timestamp_utc": "2026-11-23 21:11:21 UTC",
       "synthesized_skill": {
         "id": "clinical-trial-power-simulator",
-        "epoch": 3014,
+        "epoch": 3644,
         "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
         "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
         "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "f616bba973564cd0ef4e88db1ef782e3f779e55bb6a9f8fad0cc55da2b282bae",
+        "sha256": "81f54696cf11d5fd93d3cd7a9739bc078437ee7fd9b44b48c8777c3952b75750",
         "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:35 UTC"
+        "timestamp_utc": "2026-11-23 21:11:21 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1028,24 +893,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3014: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
+        "Epoch #3644: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3015,
-      "timestamp_utc": "2026-11-23 19:36:41 UTC",
+      "epoch": 3645,
+      "timestamp_utc": "2026-11-23 21:11:26 UTC",
       "synthesized_skill": {
         "id": "equator-consort-ai-extension",
-        "epoch": 3015,
+        "epoch": 3645,
         "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
         "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
         "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
         "agent_owner": "Agent-Peer-Reviewer",
-        "sha256": "5f8d1fc7e367cd411e02be05e7758440a65fb0c956e3cba1e8b9aff88246144e",
+        "sha256": "7a509245333f5185d06deac0899cf218f6f4f91dadfbcee22fa14a41d79829ae",
         "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:41 UTC"
+        "timestamp_utc": "2026-11-23 21:11:26 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1055,24 +920,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3015: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
+        "Epoch #3645: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3016,
-      "timestamp_utc": "2026-11-23 19:36:45 UTC",
+      "epoch": 3646,
+      "timestamp_utc": "2026-11-23 21:11:37 UTC",
       "synthesized_skill": {
         "id": "icu-waveform-kalman-denoiser",
-        "epoch": 3016,
+        "epoch": 3646,
         "title_tr": "Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı",
         "desc_tr": "500 Hz yoğun bakım EKG ve arter basıncı dalga formlarında hareket artefaktı ve elektrokoter gürültüsünü bastıran Kalman-Lyapunov çekirdeği",
         "desc_en": "Real-time adaptive Kalman-Lyapunov state estimation suppressing motion artifacts and electrosurgical interference in 500 Hz ICU ECG and arterial pressure waveforms.",
         "agent_owner": "Agent-Lyapunov (Masa 4)",
-        "sha256": "0d8afd543760c361fac0187dcde4494bc6bb0c9bfb0e7d50df48daa64bf8f031",
+        "sha256": "a76a751a99f3e7a9f8de03807bf4ac5832f0bf29a328ef70dda9edd3e68ba0c4",
         "installed_path": "skills/icu-waveform-kalman-denoiser/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:45 UTC"
+        "timestamp_utc": "2026-11-23 21:11:37 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1082,24 +947,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3016: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
+        "Epoch #3646: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3017,
-      "timestamp_utc": "2026-11-23 19:36:55 UTC",
+      "epoch": 3647,
+      "timestamp_utc": "2026-11-23 21:11:44 UTC",
       "synthesized_skill": {
         "id": "multisilicon-simd-autotuner",
-        "epoch": 3017,
+        "epoch": 3647,
         "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
         "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
         "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
         "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-        "sha256": "08e635c22642eacc29eb141bdc51f9ff38c0da7f1451bdc0523f7f726aaf3150",
+        "sha256": "5ad0148490d976d950d7471f07e68a80ccae9aeecd499ed7bcc8c5a928691d96",
         "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:36:55 UTC"
+        "timestamp_utc": "2026-11-23 21:11:44 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1109,24 +974,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3017: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
+        "Epoch #3647: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3018,
-      "timestamp_utc": "2026-11-23 19:37:06 UTC",
+      "epoch": 3648,
+      "timestamp_utc": "2026-11-23 21:11:46 UTC",
       "synthesized_skill": {
         "id": "network-meta-analysis-grade",
-        "epoch": 3018,
+        "epoch": 3648,
         "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
         "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
         "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
         "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "764c1560da0a940428c8097ff544c4bd2800e19e22143fcff3cdafa50ee5ee22",
+        "sha256": "5ffe085520f00ffc8c6b8fa14778ef6003a45748f42ad5db1f4d5c063bc599dd",
         "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:06 UTC"
+        "timestamp_utc": "2026-11-23 21:11:46 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1136,24 +1001,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3018: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
+        "Epoch #3648: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3019,
-      "timestamp_utc": "2026-11-23 19:37:09 UTC",
+      "epoch": 3649,
+      "timestamp_utc": "2026-11-23 21:11:56 UTC",
       "synthesized_skill": {
         "id": "individual-participant-data-ipd",
-        "epoch": 3019,
+        "epoch": 3649,
         "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
         "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
         "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "12127b74b39763c8d4527cffa240822afa4533138dafec8daf0b649db80c562e",
+        "sha256": "6db8c224a8e61968ec5ad8490484ca35fac29b6144dfc57d0e2d64bd46d52b12",
         "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:09 UTC"
+        "timestamp_utc": "2026-11-23 21:11:56 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1163,24 +1028,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3019: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
+        "Epoch #3649: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3020,
-      "timestamp_utc": "2026-11-23 19:37:16 UTC",
+      "epoch": 3650,
+      "timestamp_utc": "2026-11-23 21:12:07 UTC",
       "synthesized_skill": {
         "id": "propensity-score-causal-matching",
-        "epoch": 3020,
+        "epoch": 3650,
         "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
         "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
         "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
         "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-        "sha256": "828c4b594ddf6a57e95c74725198fa3b80727d31d49a5bf8b44f883be9b199dc",
+        "sha256": "8a324375f5de81c6f02532e41f9e418f40e2951a183b795c28cdac9a8f443dc5",
         "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:16 UTC"
+        "timestamp_utc": "2026-11-23 21:12:07 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1190,24 +1055,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3020: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
+        "Epoch #3650: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3021,
-      "timestamp_utc": "2026-11-23 19:37:26 UTC",
+      "epoch": 3651,
+      "timestamp_utc": "2026-11-23 21:12:19 UTC",
       "synthesized_skill": {
         "id": "bayesian-meta-regression",
-        "epoch": 3021,
+        "epoch": 3651,
         "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
         "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
         "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "94869adcaecc28607af8aa2dc4efb8aa1520e792fb2d80a2ce1bcd119f81b073",
+        "sha256": "32edd753b193e1cd533ef5ea760e46d60b01caea2f85b2f35f71a94681a359e6",
         "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:26 UTC"
+        "timestamp_utc": "2026-11-23 21:12:19 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1217,24 +1082,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3021: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
+        "Epoch #3651: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3022,
-      "timestamp_utc": "2026-11-23 19:37:37 UTC",
+      "epoch": 3652,
+      "timestamp_utc": "2026-11-23 21:12:29 UTC",
       "synthesized_skill": {
         "id": "survival-kaplan-meier-cox",
-        "epoch": 3022,
+        "epoch": 3652,
         "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
         "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
         "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "ec9199522940af9514fc7bac25572dacd53a84284e60949d4e7ffb3c0f1ff623",
+        "sha256": "820e1b328d0ca9061bc28960c808602ac9b71281dc6843288f145dc98d8fd1d5",
         "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:37 UTC"
+        "timestamp_utc": "2026-11-23 21:12:29 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1244,24 +1109,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3022: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Epoch #3652: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3023,
-      "timestamp_utc": "2026-11-23 19:37:47 UTC",
+      "epoch": 3653,
+      "timestamp_utc": "2026-11-23 21:12:43 UTC",
       "synthesized_skill": {
         "id": "diagnostic-roc-delong-audit",
-        "epoch": 3023,
+        "epoch": 3653,
         "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
         "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
         "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
         "agent_owner": "Agent-Scholar & Agent-Biostat",
-        "sha256": "1a1a88ed7ceb9f39857cca460c12289c4dad5ccfcf9ed33276a6362a64748a7a",
+        "sha256": "d7914f0512d03b7ce2ff85f9ef2c925e4f637cca6ea7ed2383ff42a94a35ffc1",
         "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:47 UTC"
+        "timestamp_utc": "2026-11-23 21:12:43 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1271,24 +1136,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3023: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
+        "Epoch #3653: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3024,
-      "timestamp_utc": "2026-11-23 19:37:58 UTC",
+      "epoch": 3654,
+      "timestamp_utc": "2026-11-23 21:12:51 UTC",
       "synthesized_skill": {
         "id": "clinical-trial-power-simulator",
-        "epoch": 3024,
+        "epoch": 3654,
         "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
         "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
         "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "947ed73b1307edfdb2989fdaea348c10e8f0fe371bf2bf80fbc028ae30dc5ec7",
+        "sha256": "e49e2a5f064d22025607ca1b8a4a3f34bc7c574c6bf28bcf2d1781f058c50d3c",
         "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:37:58 UTC"
+        "timestamp_utc": "2026-11-23 21:12:51 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1298,24 +1163,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3024: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
+        "Epoch #3654: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3025,
-      "timestamp_utc": "2026-11-23 19:38:09 UTC",
+      "epoch": 3655,
+      "timestamp_utc": "2026-11-23 21:12:58 UTC",
       "synthesized_skill": {
         "id": "equator-consort-ai-extension",
-        "epoch": 3025,
+        "epoch": 3655,
         "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
         "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
         "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
         "agent_owner": "Agent-Peer-Reviewer",
-        "sha256": "dd5896422a16974ea5493366b9528df60287d08ea8da89167cb617ccefc21969",
+        "sha256": "491e63463c1436e24d74863b07446696fb3cfec4562a4b15f196db4ba19446c9",
         "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:38:09 UTC"
+        "timestamp_utc": "2026-11-23 21:12:58 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1325,24 +1190,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3025: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
+        "Epoch #3655: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3026,
-      "timestamp_utc": "2026-11-23 19:38:12 UTC",
+      "epoch": 3656,
+      "timestamp_utc": "2026-11-23 21:13:02 UTC",
       "synthesized_skill": {
         "id": "icu-waveform-kalman-denoiser",
-        "epoch": 3026,
+        "epoch": 3656,
         "title_tr": "Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı",
         "desc_tr": "500 Hz yoğun bakım EKG ve arter basıncı dalga formlarında hareket artefaktı ve elektrokoter gürültüsünü bastıran Kalman-Lyapunov çekirdeği",
         "desc_en": "Real-time adaptive Kalman-Lyapunov state estimation suppressing motion artifacts and electrosurgical interference in 500 Hz ICU ECG and arterial pressure waveforms.",
         "agent_owner": "Agent-Lyapunov (Masa 4)",
-        "sha256": "12381628bcb98518c5e0320e8ca942eb255bf793ef918ebd82380886da1ddd6e",
+        "sha256": "7759bfa19348d9a305fb49a3247b5a0c5f57eaf7db7962d43664ac7ae8f8065f",
         "installed_path": "skills/icu-waveform-kalman-denoiser/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:38:12 UTC"
+        "timestamp_utc": "2026-11-23 21:13:02 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1352,24 +1217,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3026: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
+        "Epoch #3656: Yeni otonom beceri `icu-waveform-kalman-denoiser` (Yoğun Bakım Dalga Formu Adaptif Kalman-Lyapunov Gürültü Bastırıcı) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3027,
-      "timestamp_utc": "2026-11-23 19:38:19 UTC",
+      "epoch": 3657,
+      "timestamp_utc": "2026-11-23 21:13:12 UTC",
       "synthesized_skill": {
         "id": "multisilicon-simd-autotuner",
-        "epoch": 3027,
+        "epoch": 3657,
         "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
         "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
         "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
         "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-        "sha256": "1a4e72da7484fa8b2d7f6deee21f0a9e562705d73c16479ce7dac8f26429371f",
+        "sha256": "e1e1b8cbe18ba759807c29a88b24b690afd3447d7789b8f7552cc6ee21cf9a2b",
         "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:38:19 UTC"
+        "timestamp_utc": "2026-11-23 21:13:12 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1379,24 +1244,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3027: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
+        "Epoch #3657: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3028,
-      "timestamp_utc": "2026-11-23 19:38:29 UTC",
+      "epoch": 3658,
+      "timestamp_utc": "2026-11-23 21:13:22 UTC",
       "synthesized_skill": {
         "id": "network-meta-analysis-grade",
-        "epoch": 3028,
+        "epoch": 3658,
         "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
         "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
         "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
         "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "7b4b6afb5921f5ab1897af0f4544437e5bbb2cd646171dbe1b6fe6b73ec1731e",
+        "sha256": "15329e4a8ef376adaeef17a2fab6d21e692b3b1204983e529ae73dbb7e648de3",
         "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:38:29 UTC"
+        "timestamp_utc": "2026-11-23 21:13:22 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1406,24 +1271,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3028: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
+        "Epoch #3658: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3029,
-      "timestamp_utc": "2026-11-23 19:38:39 UTC",
+      "epoch": 3659,
+      "timestamp_utc": "2026-11-23 21:13:32 UTC",
       "synthesized_skill": {
         "id": "individual-participant-data-ipd",
-        "epoch": 3029,
+        "epoch": 3659,
         "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
         "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
         "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "e2d41ee46e5678c4f95890ccaff88059d85683842de574b33d8bb99c5a2039cf",
+        "sha256": "9cefb18de1f78c99b3fb0e263388edadba26a96080a4483a72b1a8214a361678",
         "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:38:39 UTC"
+        "timestamp_utc": "2026-11-23 21:13:32 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1433,24 +1298,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3029: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
+        "Epoch #3659: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 3030,
-      "timestamp_utc": "2026-11-23 19:38:40 UTC",
+      "epoch": 3660,
+      "timestamp_utc": "2026-11-23 21:13:42 UTC",
       "synthesized_skill": {
         "id": "propensity-score-causal-matching",
-        "epoch": 3030,
+        "epoch": 3660,
         "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
         "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
         "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
         "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-        "sha256": "19366177a25a05756eaabeddbc4bca5d689d43bead46a699fd37a870aaa710ee",
+        "sha256": "c2b1106c0574704a06e9e06f5a772d80dd246891064be79196311cb818ef0163",
         "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-        "timestamp_utc": "2026-11-23 19:38:40 UTC"
+        "timestamp_utc": "2026-11-23 21:13:42 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1460,132 +1325,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #3030: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
+        "Epoch #3660: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 17,
-      "timestamp_utc": "2026-11-22 23:09:21 UTC",
-      "synthesized_skill": {
-        "id": "multisilicon-simd-autotuner",
-        "epoch": 17,
-        "title_tr": "Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici",
-        "desc_tr": "ARM64 NEON ve x86_64 AVX2 çekirdekleri için Roofline modeli tabanlı otomatik vektör yazmaç bloklama ve FMA zamanlayıcı",
-        "desc_en": "Roofline-model-guided SIMD register blocking, FMA instruction scheduling, and cache-line alignment autotuner for ARM64 NEON and x86_64 AVX2 kernels.",
-        "agent_owner": "Agent-FullStack & Silicon (Masa 8)",
-        "sha256": "3763de11040aa481185fb1b862f67a08cf9fb225d84ff028b714f9b21a467e55",
-        "installed_path": "skills/multisilicon-simd-autotuner/SKILL.md",
-        "timestamp_utc": "2026-11-22 23:09:21 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #017: Yeni otonom beceri `multisilicon-simd-autotuner` (Çatı-Çizgisi (Roofline) Güdümlü ARM64 NEON & AVX2 SIMD Otomatik İyileştirici) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 18,
-      "timestamp_utc": "2026-11-22 23:09:23 UTC",
-      "synthesized_skill": {
-        "id": "network-meta-analysis-grade",
-        "epoch": 18,
-        "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
-        "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
-        "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
-        "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "9d1aef63b20398d6ebe2ca8752794cb0fcad2d6d093cc5112b98589e48ff2d03",
-        "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-22 23:09:23 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #018: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 19,
-      "timestamp_utc": "2026-11-23 05:26:43 UTC",
-      "synthesized_skill": {
-        "id": "individual-participant-data-ipd",
-        "epoch": 19,
-        "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
-        "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
-        "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
-        "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "b4a60d21870f0628e662e446be83e36d153f918dba4399e7ace31fefdc593703",
-        "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 05:26:43 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #019: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 20,
-      "timestamp_utc": "2026-11-23 05:26:45 UTC",
-      "synthesized_skill": {
-        "id": "propensity-score-causal-matching",
-        "epoch": 20,
-        "title_tr": "Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)",
-        "desc_tr": "Gözlemsel çalışmalarda Eğilim Skoru Eşleştirme (PSM), IPTW ağırlıklandırma, SMD denge kontrolü ve E-değeri nedensellik analizi",
-        "desc_en": "Observational causal inference via Propensity Score Matching (PSM), Inverse Probability of Treatment Weighting (IPTW), standardized mean difference (SMD < 0.10) balance diagnostics, and E-value sensitivity.",
-        "agent_owner": "Agent-Critical-Thinking & Agent-Biostat",
-        "sha256": "74d4ff7bcb8afb002491fdc066295a61b1c1644accbf92fa72e2e011a843d01f",
-        "installed_path": "skills/propensity-score-causal-matching/SKILL.md",
-        "timestamp_utc": "2026-11-23 05:26:45 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #020: Yeni otonom beceri `propensity-score-causal-matching` (Eğilim Skoru Eşleştirme (PSM) & Ters Olasılık Ağırlıklandırma (IPTW)) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 21,
-      "timestamp_utc": "2026-11-23 17:13:13 UTC",
+      "epoch": 3661,
+      "timestamp_utc": "2026-11-23 21:13:53 UTC",
       "synthesized_skill": {
         "id": "bayesian-meta-regression",
-        "epoch": 21,
+        "epoch": 3661,
         "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
         "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
         "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "5b87bb0cc213da6b4ad41f74c8db408d5e32bc18ddeeac0654b2151ccdece336",
+        "sha256": "44838dd1b8a87a219cad11605b057c5be761a6c6ce8f933d694a62fde7879f09",
         "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-        "timestamp_utc": "2026-11-23 17:13:13 UTC"
+        "timestamp_utc": "2026-11-23 21:13:53 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1595,24 +1352,24 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #021: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
+        "Epoch #3661: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     },
     {
-      "epoch": 22,
-      "timestamp_utc": "2026-11-23 17:13:15 UTC",
+      "epoch": 3662,
+      "timestamp_utc": "2026-11-23 21:14:04 UTC",
       "synthesized_skill": {
         "id": "survival-kaplan-meier-cox",
-        "epoch": 22,
+        "epoch": 3662,
         "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
         "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
         "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
         "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "f38360bf2f65c7e9e461e32278bd3f2975d2a6532a4ab6c18e39193c917aa8bb",
+        "sha256": "8d4b88fe2e9dfd81c36fa0f9b56328197fd5f438157822fa28261b4576ab5a16",
         "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 17:13:15 UTC"
+        "timestamp_utc": "2026-11-23 21:14:04 UTC"
       },
       "verification_gate": {
         "passed": true,
@@ -1622,12 +1379,93 @@
       },
       "total_installed_skills": 45,
       "website_improvements": [
-        "Epoch #022: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Epoch #3662: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
+    },
+    {
+      "epoch": 3663,
+      "timestamp_utc": "2026-11-23 21:14:09 UTC",
+      "synthesized_skill": {
+        "id": "diagnostic-roc-delong-audit",
+        "epoch": 3663,
+        "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
+        "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
+        "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
+        "agent_owner": "Agent-Scholar & Agent-Biostat",
+        "sha256": "1aa03c986a051e32d7a523d7591622170bd8f3d8e6990705d7b27168a9d6c83a",
+        "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
+        "timestamp_utc": "2026-11-23 21:14:09 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3663: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
+    },
+    {
+      "epoch": 3664,
+      "timestamp_utc": "2026-11-23 21:14:13 UTC",
+      "synthesized_skill": {
+        "id": "clinical-trial-power-simulator",
+        "epoch": 3664,
+        "title_tr": "Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü",
+        "desc_tr": "Klinik araştırmalarda a-priori örneklem büyüklüğü, ardışık alfa-harcama sınırları ve Monte Carlo istatistiksel güç simülasyonu",
+        "desc_en": "A-priori and adaptive clinical trial sample size calculation, O'Brien-Fleming alpha-spending sequential boundaries, and Monte Carlo power (1 - beta) simulation.",
+        "agent_owner": "Agent-Biostat (Masa 3)",
+        "sha256": "191d41469839be8fd7af387ee7066553cfbc6be0a2b08b89eca5f9226026183f",
+        "installed_path": "skills/clinical-trial-power-simulator/SKILL.md",
+        "timestamp_utc": "2026-11-23 21:14:13 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3664: Yeni otonom beceri `clinical-trial-power-simulator` (Klinik Araştırma Örneklem Büyüklüğü & Monte Carlo Güç Simülatörü) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
+    },
+    {
+      "epoch": 3665,
+      "timestamp_utc": "2026-11-23 21:14:16 UTC",
+      "synthesized_skill": {
+        "id": "equator-consort-ai-extension",
+        "epoch": 3665,
+        "title_tr": "CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi",
+        "desc_tr": "Klinik yapay zeka çalışmalarının CONSORT-AI ve SPIRIT-AI uluslararası protokol standartlarına tam uyum denetimi",
+        "desc_en": "Audits clinical artificial intelligence trial protocols and reports against CONSORT-AI and SPIRIT-AI extensions (human-AI interaction, input data handling, error failure modes).",
+        "agent_owner": "Agent-Peer-Reviewer",
+        "sha256": "6ac08e4f139ed9b68096fef3f4cff1caf6776f923f1ecc8e38e1d68b47b7efbc",
+        "installed_path": "skills/equator-consort-ai-extension/SKILL.md",
+        "timestamp_utc": "2026-11-23 21:14:16 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3665: Yeni otonom beceri `equator-consort-ai-extension` (CONSORT-AI & SPIRIT-AI Klinik Yapay Zeka Araştırma Protokol Denetçisi) sentezlendi ve doğrulandı.",
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
     }
   ],
   "total_installed_skills": 45,
-  "last_updated_utc": "2026-11-23 19:38:40 UTC"
+  "last_updated_utc": "2026-11-23 21:14:16 UTC"
 }

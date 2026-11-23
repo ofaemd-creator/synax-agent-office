@@ -492,9 +492,32 @@ def build_embedded_3d_office_html() -> str:
       <button onclick="openAccountHubModal()" class="badge" id="connectedAccountBadge" style="cursor:pointer;color:#fde047;border-color:#f59e0b;background:rgba(245,158,11,0.18);">🔑 Kendi Hesabını &amp; Özel Ajanını Bağla</button>
       <button onclick="openComputerTab()" class="badge" style="cursor:pointer;color:#34d399;border-color:#10b981;">🖥️ Bilgisayarım &amp; Sistem Doktoru</button>
       <button onclick="openLocalWorkspaceFolder()" class="badge" style="cursor:pointer;color:#38bdf8;border-color:#38bdf8;">📂 Bilgisayarımdaki Klasörü Aç</button>
-      <a href="https://github.com/ofaemd-creator/synax-agent-office/releases/download/v4.0.0/SYNAX-Desktop-macOS-v4.0.0.zip" class="badge" style="color:#fde047;border-color:#f59e0b;background:rgba(245,158,11,0.16);">💻 Masaüstü Uygulamasını İndir (v4.2)</a>
+      <a href="https://chat.synaxcode.com" class="badge" style="color:#34d399;border-color:#10b981;background:rgba(16,185,129,0.16);">💬 chat.synaxcode.com</a>
+      <a href="https://code.synaxcode.com" class="badge" style="color:#38bdf8;border-color:#38bdf8;background:rgba(56,189,248,0.16);">💻 code.synaxcode.com</a>
+      <a href="https://terminal.synaxcode.com" class="badge" style="color:#c084fc;border-color:#a855f7;background:rgba(168,85,247,0.16);">⌨️ terminal.synaxcode.com</a>
     </div>
   </header>
+
+  <!-- ===================================================================== -->
+  <!-- EXECUTIVE AGENT OFFICE COMMAND & CONTROL DECK + SUBDOMAIN BAR         -->
+  <!-- ===================================================================== -->
+  <div style="background:linear-gradient(90deg,#060c1d,#0a152e,#060c1d);border-bottom:1px solid rgba(245,158,11,0.45);padding:8px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;z-index:28;">
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+      <span style="font-size:11.5px;font-weight:900;color:#fde047;letter-spacing:0.3px;">🎛️ AJAN OFİSİ KOMUTA &amp; KONTROL MERKEZİ:</span>
+      <button id="autoLoopToggleBtn" onclick="toggleAutonomousLoop()" style="background:rgba(16,185,129,0.22);color:#34d399;border:1px solid #10b981;border-radius:8px;padding:5px 10px;font-size:11px;font-weight:900;cursor:pointer;">▶️ 7/24 Otonom Mod: AKTİF</button>
+      <select id="autoLoopSpeedSelect" onchange="changeShiftInterval(this.value)" style="background:#081022;color:#38bdf8;border:1px solid rgba(56,189,248,0.45);border-radius:8px;padding:4px 8px;font-size:11px;font-weight:800;">
+        <option value="15000">⚡ Vardiya Hızı: Turbo (15 sn)</option>
+        <option value="35000" selected>⚙️ Vardiya Hızı: Standart (35 sn)</option>
+        <option value="90000">🔬 Vardiya Hızı: Derin Araştırma (90 sn)</option>
+      </select>
+      <button onclick="triggerAutonomousOfficeShift(false)" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#030712;border:none;border-radius:8px;padding:5px 11px;font-size:11px;font-weight:900;cursor:pointer;">🤖 Şimdi Vardiya Çalıştır</button>
+      <button onclick="triggerSelfEvolutionCycle()" style="background:linear-gradient(135deg,#10b981,#059669);color:#fff;border:none;border-radius:8px;padding:5px 11px;font-size:11px;font-weight:800;cursor:pointer;">🧬 +1 Yeni Beceri Evrimleş</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;flex:1;max-width:520px;min-width:260px;">
+      <input id="masterCommandInput" type="text" placeholder="8 Pixar Ajanına aynı anda emir verin (ör: Septik şok Q1 makale ve ARM64 NEON kodu üret)..." onkeydown="if(event.key==='Enter'){dispatchAll8Agents(this.value);this.value='';}" style="flex:1;background:#050a16;border:1px solid rgba(245,158,11,0.45);color:#fff;border-radius:8px;padding:5px 10px;font-size:11.5px;outline:none;" />
+      <button onclick="const el=document.getElementById('masterCommandInput');dispatchAll8Agents(el.value);el.value='';" style="background:linear-gradient(135deg,#38bdf8,#2563eb);color:#fff;border:none;border-radius:8px;padding:5px 11px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap;">🎯 Toplu Emir Ver</button>
+    </div>
+  </div>
 
   <!-- ===================================================================== -->
   <!-- ACCOUNT & CUSTOM AGENT CONNECTOR MODAL (BYOK / CLAUDE / CODEX / OLLAMA) -->
@@ -2106,6 +2129,35 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
       }
     }
 
+    let _autoLoopEnabled = true;
+    let _autoLoopTimer = null;
+
+    function toggleAutonomousLoop() {
+      _autoLoopEnabled = !_autoLoopEnabled;
+      const btn = document.getElementById('autoLoopToggleBtn');
+      if (btn) {
+        if (_autoLoopEnabled) {
+          btn.textContent = '▶️ 7/24 Otonom Mod: AKTİF';
+          btn.style.background = 'rgba(16,185,129,0.22)';
+          btn.style.color = '#34d399';
+          btn.style.borderColor = '#10b981';
+        } else {
+          btn.textContent = '⏸️ 7/24 Otonom Mod: DURAKLATILDI';
+          btn.style.background = 'rgba(239,68,68,0.22)';
+          btn.style.color = '#fca5a5';
+          btn.style.borderColor = '#ef4444';
+        }
+      }
+    }
+
+    function changeShiftInterval(msStr) {
+      const ms = parseInt(msStr, 10) || 35000;
+      if (_autoLoopTimer) clearInterval(_autoLoopTimer);
+      _autoLoopTimer = setInterval(() => {
+        if (_autoLoopEnabled) triggerAutonomousOfficeShift(true);
+      }, ms);
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       renderDesksMatrix();
       renderWorkbenchContent();
@@ -2113,20 +2165,22 @@ irm https://raw.githubusercontent.com/ofaemd-creator/synax-agent-office/main/ins
       // Inject Live Autonomous Self-Evolution & 24/7 Office Automation HUD Bar
       const hud = document.createElement('div');
       hud.id = 'synaxAutonomousEvolutionHUD';
-      hud.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:9999;background:rgba(10,16,32,0.96);border:1.5px solid rgba(16,185,129,0.65);border-radius:12px;padding:9px 14px;color:#e2e8f0;font-size:11.5px;display:flex;flex-direction:column;gap:6px;box-shadow:0 12px 32px rgba(0,0,0,0.65);backdrop-filter:blur(10px);max-width:840px;';
+      hud.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:9999;background:rgba(10,16,32,0.96);border:1.5px solid rgba(16,185,129,0.65);border-radius:12px;padding:9px 14px;color:#e2e8f0;font-size:11.5px;display:flex;flex-direction:column;gap:6px;box-shadow:0 12px 32px rgba(0,0,0,0.65);backdrop-filter:blur(10px);max-width:860px;';
       hud.innerHTML =
-        `<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">` +
+        `<div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;">` +
           `<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#10b981;box-shadow:0 0 10px #10b981;"></span>` +
-          `<span id="synaxEvoStatusBadge">🤖 <b>7/24 Otonom Ajan Ofisi Aktif</b> · <b>45+ Beceri</b></span>` +
+          `<span id="synaxEvoStatusBadge">🤖 <b>7/24 Otonom Ajan Ofisi Aktif</b> · <b>46+ Beceri</b></span>` +
           `<button onclick="triggerAutonomousOfficeShift(false)" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f172a;border:none;border-radius:7px;padding:5px 11px;font-size:11px;font-weight:900;cursor:pointer;">🤖 Şimdi Otonom Vardiya Çalıştır</button>` +
           `<button onclick="triggerSelfEvolutionCycle()" style="background:linear-gradient(135deg,#10b981,#059669);color:#fff;border:none;border-radius:7px;padding:5px 11px;font-size:11px;font-weight:800;cursor:pointer;">🧬 +1 Yeni Beceri Evrimleş</button>` +
-          `<button onclick="openLocalWorkspaceFolder()" style="background:rgba(56,189,248,0.2);color:#38bdf8;border:1px solid rgba(56,189,248,0.45);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:800;cursor:pointer;">📂 Üretilen Dosyaları Finder'da Aç</button>` +
+          `<a href="https://chat.synaxcode.com" style="background:rgba(16,185,129,0.18);color:#34d399;border:1px solid rgba(16,185,129,0.45);border-radius:7px;padding:5px 9px;font-size:11px;font-weight:800;text-decoration:none;">💬 Chat</a>` +
+          `<a href="https://code.synaxcode.com" style="background:rgba(56,189,248,0.18);color:#38bdf8;border:1px solid rgba(56,189,248,0.45);border-radius:7px;padding:5px 9px;font-size:11px;font-weight:800;text-decoration:none;">💻 Code</a>` +
+          `<a href="https://terminal.synaxcode.com" style="background:rgba(168,85,247,0.18);color:#c084fc;border:1px solid rgba(168,85,247,0.45);border-radius:7px;padding:5px 9px;font-size:11px;font-weight:800;text-decoration:none;">⌨️ Terminal</a>` +
         `</div>` +
         `<div id="synaxLiveMissionsTicker" style="font-size:10.8px;color:#cbd5e1;border-top:1px solid rgba(255,255,255,0.08);padding-top:4px;">⏳ Ajanların canlı görev kuyruğu ve diske yazdığı dosyalar yükleniyor...</div>`;
       document.body.appendChild(hud);
       pollAutomationAndEvolutionStatus();
-      setInterval(() => { pollAutomationAndEvolutionStatus(); }, 8000);
-      setInterval(() => { triggerAutonomousOfficeShift(true); }, 35000);
+      setInterval(() => { if (_autoLoopEnabled) pollAutomationAndEvolutionStatus(); }, 8000);
+      _autoLoopTimer = setInterval(() => { if (_autoLoopEnabled) triggerAutonomousOfficeShift(true); }, 35000);
       appendChatBubble(
         'ai',
         'Merhaba **Dr. Aydın**! **SYNAX-OMNI v6.5 (7/24 Çalışan Otonom Ajan Ofisi Daemonu + 43+ Q1 SCIE Akademik & Silikon Beceri + Canlı PubMed RAG + AST Sandbox)** aktif!\n\n' +
@@ -2178,6 +2232,21 @@ class AgentOfficeHTTPHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(body)
             return
+        if self.path in ("/chat", "/chat.html", "/code", "/code.html", "/terminal", "/terminal.html"):
+            map_file = {
+                "/chat": "chat_index.html", "/chat.html": "chat_index.html",
+                "/code": "code_index.html", "/code.html": "code_index.html",
+                "/terminal": "terminal_index.html", "/terminal.html": "terminal_index.html",
+            }[self.path]
+            cand = Path("/Users/o.farukaydin/.gemini/antigravity/scratch/synax/sites") / map_file
+            if cand.exists():
+                body = cand.read_bytes()
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+                return
         if self.path == "/api/automation/status":
             st = self.get_automation_daemon().get_status()
             payload = json.dumps(st, ensure_ascii=False).encode("utf-8")
