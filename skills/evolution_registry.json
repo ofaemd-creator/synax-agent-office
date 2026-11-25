@@ -1,6 +1,6 @@
 {
   "engine_version": "6.4.0",
-  "evolution_epoch": 3671,
+  "evolution_epoch": 3673,
   "base_skills_count": 21,
   "evolved_skills": [
     {
@@ -16,25 +16,25 @@
     },
     {
       "id": "survival-kaplan-meier-cox",
-      "epoch": 3662,
+      "epoch": 3672,
       "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
       "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
       "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "8d4b88fe2e9dfd81c36fa0f9b56328197fd5f438157822fa28261b4576ab5a16",
+      "sha256": "c664c284b721652d72c74b4251f1f216de651a45728e27c81e675fc3d87e9739",
       "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-      "timestamp_utc": "2026-11-23 21:14:04 UTC"
+      "timestamp_utc": "2026-11-25 16:41:52 UTC"
     },
     {
       "id": "diagnostic-roc-delong-audit",
-      "epoch": 3663,
+      "epoch": 3673,
       "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
       "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
       "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
       "agent_owner": "Agent-Scholar & Agent-Biostat",
-      "sha256": "1aa03c986a051e32d7a523d7591622170bd8f3d8e6990705d7b27168a9d6c83a",
+      "sha256": "921cc583b599e8f2c627bcfee690a60b1762b7cd85b5d1f28c3e08422304728c",
       "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-      "timestamp_utc": "2026-11-23 21:14:09 UTC"
+      "timestamp_utc": "2026-11-25 16:41:54 UTC"
     },
     {
       "id": "clinical-trial-power-simulator",
@@ -115,60 +115,6 @@
     }
   ],
   "history": [
-    {
-      "epoch": 3622,
-      "timestamp_utc": "2026-11-23 21:08:06 UTC",
-      "synthesized_skill": {
-        "id": "survival-kaplan-meier-cox",
-        "epoch": 3622,
-        "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
-        "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
-        "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
-        "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "c1b57f3c1c3aaf09f4d872c8611206da015c424d908e695c683c133139c34743",
-        "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-        "timestamp_utc": "2026-11-23 21:08:06 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #3622: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 3623,
-      "timestamp_utc": "2026-11-23 21:08:13 UTC",
-      "synthesized_skill": {
-        "id": "diagnostic-roc-delong-audit",
-        "epoch": 3623,
-        "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
-        "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
-        "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
-        "agent_owner": "Agent-Scholar & Agent-Biostat",
-        "sha256": "e79d046edf46fd5d94df942a40eda9e320a1083117ab22a7b0d4840c526eacd4",
-        "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-        "timestamp_utc": "2026-11-23 21:08:13 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #3623: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
     {
       "epoch": 3624,
       "timestamp_utc": "2026-11-23 21:08:17 UTC",
@@ -1464,8 +1410,62 @@
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
+    },
+    {
+      "epoch": 3672,
+      "timestamp_utc": "2026-11-25 16:41:52 UTC",
+      "synthesized_skill": {
+        "id": "survival-kaplan-meier-cox",
+        "epoch": 3672,
+        "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
+        "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
+        "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
+        "agent_owner": "Agent-Biostat (Masa 3)",
+        "sha256": "c664c284b721652d72c74b4251f1f216de651a45728e27c81e675fc3d87e9739",
+        "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
+        "timestamp_utc": "2026-11-25 16:41:52 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3672: Yeni otonom beceri `survival-kaplan-meier-cox` (Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
+    },
+    {
+      "epoch": 3673,
+      "timestamp_utc": "2026-11-25 16:41:54 UTC",
+      "synthesized_skill": {
+        "id": "diagnostic-roc-delong-audit",
+        "epoch": 3673,
+        "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
+        "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
+        "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
+        "agent_owner": "Agent-Scholar & Agent-Biostat",
+        "sha256": "921cc583b599e8f2c627bcfee690a60b1762b7cd85b5d1f28c3e08422304728c",
+        "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
+        "timestamp_utc": "2026-11-25 16:41:54 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3673: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
     }
   ],
   "total_installed_skills": 45,
-  "last_updated_utc": "2026-11-25 01:51:57 UTC"
+  "last_updated_utc": "2026-11-25 16:41:54 UTC"
 }

@@ -1,19 +1,19 @@
 {
   "status": "AUTONOMOUS_EVOLUTION_ACTIVE",
   "engine_version": "6.4.0",
-  "evolution_epoch": 3671,
+  "evolution_epoch": 3673,
   "total_installed_skills": 45,
-  "last_updated_utc": "2026-11-25 01:51:57 UTC",
+  "last_updated_utc": "2026-11-25 16:41:54 UTC",
   "latest_evolved_skill": {
-    "id": "bayesian-meta-regression",
-    "epoch": 3671,
-    "title_tr": "Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi",
-    "desc_tr": "Hiyerarşik Bayesyen rastgele etkiler meta-analizi, yarı-Cauchy önsel dağılım duyarlılığı ve ortak değişken meta-regresyonu",
-    "desc_en": "Hierarchical Bayesian random-effects meta-analysis, weakly informative half-Cauchy priors for tau, and meta-regression covariate modeling.",
-    "agent_owner": "Agent-Biostat (Masa 3)",
-    "sha256": "8b23c0b196eb9b365a3ecf40f96530b26e098d3450e8e39f69dd2acafc8229de",
-    "installed_path": "skills/bayesian-meta-regression/SKILL.md",
-    "timestamp_utc": "2026-11-25 01:51:57 UTC"
+    "id": "diagnostic-roc-delong-audit",
+    "epoch": 3673,
+    "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
+    "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
+    "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
+    "agent_owner": "Agent-Scholar & Agent-Biostat",
+    "sha256": "921cc583b599e8f2c627bcfee690a60b1762b7cd85b5d1f28c3e08422304728c",
+    "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
+    "timestamp_utc": "2026-11-25 16:41:54 UTC"
   },
   "evolved_skills": [
     {
@@ -29,25 +29,25 @@
     },
     {
       "id": "survival-kaplan-meier-cox",
-      "epoch": 3662,
+      "epoch": 3672,
       "title_tr": "Sağkalım Analizi (Kaplan-Meier, Log-Rank & Cox Orantılı Tehlikeler)",
       "desc_tr": "Kaplan-Meier sağkalım eğrileri, Log-Rank testi, Cox Hazard Ratio (%95 GA) ve orantılı tehlikeler varsayımı denetimi",
       "desc_en": "Time-to-event survival analysis, Kaplan-Meier curves, log-rank hypothesis testing, Hazard Ratios (HR with 95% CI), andSchoenfeld residuals proportional hazards audit.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "8d4b88fe2e9dfd81c36fa0f9b56328197fd5f438157822fa28261b4576ab5a16",
+      "sha256": "c664c284b721652d72c74b4251f1f216de651a45728e27c81e675fc3d87e9739",
       "installed_path": "skills/survival-kaplan-meier-cox/SKILL.md",
-      "timestamp_utc": "2026-11-23 21:14:04 UTC"
+      "timestamp_utc": "2026-11-25 16:41:52 UTC"
     },
     {
       "id": "diagnostic-roc-delong-audit",
-      "epoch": 3663,
+      "epoch": 3673,
       "title_tr": "Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi",
       "desc_tr": "STARD 2015 uyumlu tanısal doğruluk, ROC/AUC, DeLong testi, duyarlılık/özgüllük ve olabilirlik oranları (LR+/LR-) analizi",
       "desc_en": "Diagnostic accuracy evaluation compliant with STARD 2015: ROC-AUC confidence intervals, DeLong pairwise AUC comparison, Youden J index, Fagan nomogram, and likelihood ratios (LR+/LR-).",
       "agent_owner": "Agent-Scholar & Agent-Biostat",
-      "sha256": "1aa03c986a051e32d7a523d7591622170bd8f3d8e6990705d7b27168a9d6c83a",
+      "sha256": "921cc583b599e8f2c627bcfee690a60b1762b7cd85b5d1f28c3e08422304728c",
       "installed_path": "skills/diagnostic-roc-delong-audit/SKILL.md",
-      "timestamp_utc": "2026-11-23 21:14:09 UTC"
+      "timestamp_utc": "2026-11-25 16:41:54 UTC"
     },
     {
       "id": "clinical-trial-power-simulator",
@@ -128,7 +128,7 @@
     }
   ],
   "recent_website_improvements": [
-    "Epoch #3671: Yeni otonom beceri `bayesian-meta-regression` (Hiyerarşik Bayesyen Meta-Regresyon & Önsel Duyarlılık Analizi) sentezlendi ve doğrulandı.",
+    "Epoch #3673: Yeni otonom beceri `diagnostic-roc-delong-audit` (Tanısal Doğruluk, ROC/AUC, DeLong Testi & STARD 2015 Denetimi) sentezlendi ve doğrulandı.",
     "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
     "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
   ],
