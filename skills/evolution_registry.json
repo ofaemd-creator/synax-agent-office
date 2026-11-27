@@ -1,6 +1,6 @@
 {
   "engine_version": "6.4.0",
-  "evolution_epoch": 3677,
+  "evolution_epoch": 3679,
   "base_skills_count": 21,
   "evolved_skills": [
     {
@@ -82,25 +82,25 @@
     },
     {
       "id": "network-meta-analysis-grade",
-      "epoch": 3668,
+      "epoch": 3678,
       "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
       "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
       "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
       "agent_owner": "Agent-Biostat & Agent-Scholar",
-      "sha256": "bbfd26d370b392e8f140504ad8e3e3867f830be90e6e60a81c695958e3b5d635",
+      "sha256": "73aa7b7fb0ff4123ae638265899798d830a8286ced84fa1a66a20f04d102811a",
       "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-      "timestamp_utc": "2026-11-24 16:54:08 UTC"
+      "timestamp_utc": "2026-11-27 01:26:53 UTC"
     },
     {
       "id": "individual-participant-data-ipd",
-      "epoch": 3669,
+      "epoch": 3679,
       "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
       "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
       "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
       "agent_owner": "Agent-Biostat (Masa 3)",
-      "sha256": "de3b7b327b955c35e0b6efab8cc1d653eec4615d50a1c71815c70d87c65811a6",
+      "sha256": "4390f7ce015651f1487772d0b6819086718d497d6f40346e05554bc7b74bc0cc",
       "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-      "timestamp_utc": "2026-11-24 16:54:10 UTC"
+      "timestamp_utc": "2026-11-27 01:26:54 UTC"
     },
     {
       "id": "propensity-score-causal-matching",
@@ -115,60 +115,6 @@
     }
   ],
   "history": [
-    {
-      "epoch": 3628,
-      "timestamp_utc": "2026-11-23 21:08:48 UTC",
-      "synthesized_skill": {
-        "id": "network-meta-analysis-grade",
-        "epoch": 3628,
-        "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
-        "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
-        "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
-        "agent_owner": "Agent-Biostat & Agent-Scholar",
-        "sha256": "ea795e3cde9535b9f6eb001f7c90376bb1991a2d84cc9cd5923051316bfb600a",
-        "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
-        "timestamp_utc": "2026-11-23 21:08:48 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #3628: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
-    {
-      "epoch": 3629,
-      "timestamp_utc": "2026-11-23 21:08:59 UTC",
-      "synthesized_skill": {
-        "id": "individual-participant-data-ipd",
-        "epoch": 3629,
-        "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
-        "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
-        "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
-        "agent_owner": "Agent-Biostat (Masa 3)",
-        "sha256": "ce1c79ecb91e6c44d1c6bff8641a93311f8ff0f7c21a074c480969e5f4c927b2",
-        "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
-        "timestamp_utc": "2026-11-23 21:08:59 UTC"
-      },
-      "verification_gate": {
-        "passed": true,
-        "lyapunov_verified": true,
-        "dersimonian_laird_verified": true,
-        "security_sanitizer_verified": true
-      },
-      "total_installed_skills": 45,
-      "website_improvements": [
-        "Epoch #3629: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
-        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
-        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
-      ]
-    },
     {
       "epoch": 3630,
       "timestamp_utc": "2026-11-23 21:09:10 UTC",
@@ -1464,8 +1410,62 @@
         "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
         "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
       ]
+    },
+    {
+      "epoch": 3678,
+      "timestamp_utc": "2026-11-27 01:26:53 UTC",
+      "synthesized_skill": {
+        "id": "network-meta-analysis-grade",
+        "epoch": 3678,
+        "title_tr": "Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE",
+        "desc_tr": "Çoklu tedavi karşılaştırmalı Ağ Meta-Analizi (NMA), tutarsızlık (node-splitting) kontrolü ve SUCRA tedavi başarı sıralaması",
+        "desc_en": "Frequentist and Bayesian Network Meta-Analysis (NMA), node-splitting inconsistency checks, SUCRA treatment ranking probabilities, and CINeMA/GRADE certainty evaluation.",
+        "agent_owner": "Agent-Biostat & Agent-Scholar",
+        "sha256": "73aa7b7fb0ff4123ae638265899798d830a8286ced84fa1a66a20f04d102811a",
+        "installed_path": "skills/network-meta-analysis-grade/SKILL.md",
+        "timestamp_utc": "2026-11-27 01:26:53 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3678: Yeni otonom beceri `network-meta-analysis-grade` (Ağ Meta-Analizi (Network Meta-Analysis), SUCRA Sıralaması & CINeMA/GRADE) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
+    },
+    {
+      "epoch": 3679,
+      "timestamp_utc": "2026-11-27 01:26:54 UTC",
+      "synthesized_skill": {
+        "id": "individual-participant-data-ipd",
+        "epoch": 3679,
+        "title_tr": "Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli",
+        "desc_tr": "PRISMA-IPD uyumlu tek ve iki aşamalı Bireysel Hasta Verisi meta-analizi ve karma etkili alt-grup etkileşim modellemesi",
+        "desc_en": "PRISMA-IPD compliant one-stage and two-stage Individual Participant Data meta-analysis with mixed-effects treatment-by-covariate interaction modeling.",
+        "agent_owner": "Agent-Biostat (Masa 3)",
+        "sha256": "4390f7ce015651f1487772d0b6819086718d497d6f40346e05554bc7b74bc0cc",
+        "installed_path": "skills/individual-participant-data-ipd/SKILL.md",
+        "timestamp_utc": "2026-11-27 01:26:54 UTC"
+      },
+      "verification_gate": {
+        "passed": true,
+        "lyapunov_verified": true,
+        "dersimonian_laird_verified": true,
+        "security_sanitizer_verified": true
+      },
+      "total_installed_skills": 45,
+      "website_improvements": [
+        "Epoch #3679: Yeni otonom beceri `individual-participant-data-ipd` (Bireysel Hasta Verisi (IPD) Meta-Analizi & Alt-Grup Etkileşim Modeli) sentezlendi ve doğrulandı.",
+        "Aktif toplam beceri kapasitesi 45 beceriye yükseltildi.",
+        "8 Ajanlı 3D Ofis telemetri önbelleği, Lyapunov sıfır-sapma (V_{k+1} < V_k) ve PRISMA 2020 kanıt indeksleri güncellendi."
+      ]
     }
   ],
   "total_installed_skills": 45,
-  "last_updated_utc": "2026-11-26 16:16:40 UTC"
+  "last_updated_utc": "2026-11-27 01:26:54 UTC"
 }
